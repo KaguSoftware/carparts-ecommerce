@@ -1,0 +1,107 @@
+{
+  "store": {
+    "header": {
+      "skipToContent": "Skip to main content",
+      "home": "APEXLINE Auto Parts, home",
+      "wishlist": "Wishlist",
+      "account": "My account",
+      "signIn": "Sign in",
+      "savedShort": "Saved",
+      "accountShort": "Account",
+      "signInShort": "Sign in"
+    },
+    "nav": {
+      "categories": "Shop by category",
+      "shopAll": "Shop all {name}",
+      "deals": "Deals",
+      "brands": "Brands",
+      "openMenu": "Open menu",
+      "menu": "Menu",
+      "mobile": "Main navigation",
+      "garage": "My Garage",
+      "account": "My account",
+      "signIn": "Sign in or create account",
+      "trackOrder": "Track an order"
+    },
+    "search": {
+      "label": "Search parts",
+      "placeholder": "Search parts, brands or part numbers",
+      "clear": "Clear search",
+      "submit": "Search",
+      "suggestions": "Search suggestions",
+      "searching": "Searching...",
+      "typeMore": "Keep typing to see matching parts.",
+      "noResults": "No matches for \"{query}\"",
+      "noResultsHint": "Check the spelling or try a part number, a brand or a category.",
+      "partMatch": "Part number match",
+      "products": "Parts",
+      "categories": "Categories",
+      "brands": "Brands",
+      "goToPart": "Go to part {code}",
+      "seeAll": "See all results for \"{query}\"",
+      "resultsAnnounce": "{count, plural, one {# suggestion available} other {# suggestions available}}"
+    },
+    "newsletter": {
+      "emailLabel": "Email address",
+      "placeholder": "you@example.com",
+      "submit": "Subscribe",
+      "privacy": "One email a month. Unsubscribe any time.",
+      "success": "You are on the list. Check your inbox for a welcome note.",
+      "alreadySubscribed": "You are already subscribed. Thanks for staying with us."
+    },
+    "footer": {
+      "newsletterTitle": "Workshop notes, once a month",
+      "newsletterBody": "Fitment tips, service intervals and the best deals. No filler.",
+      "home": "APEXLINE Auto Parts, home",
+      "shop": "Shop",
+      "brands": "All brands",
+      "deals": "Deals",
+      "help": "Help",
+      "trackOrder": "Track an order",
+      "contact": "Contact us",
+      "garage": "My Garage",
+      "account": "My account",
+      "company": "Company",
+      "follow": "Follow us",
+      "social": {
+        "instagram": "Instagram",
+        "youtube": "YouTube",
+        "x": "X",
+        "facebook": "Facebook"
+      },
+      "opensInNewTab": "(opens in a new tab)",
+      "copyright": "© {year} {name}. All rights reserved.",
+      "securePayments": "Secure checkout. Cards are never stored.",
+      "titleBlock": {
+        "label": "Drawing title block",
+        "dwg": "DWG",
+        "sheet": "Sheet",
+        "rev": "Rev"
+      }
+    },
+    "vehicle": {
+      "make": "Make",
+      "model": "Model",
+      "year": "Year",
+      "engine": "Engine",
+      "selectMake": "Select make",
+      "selectModel": "Select model",
+      "anyYear": "Any year",
+      "anyEngine": "Any engine",
+      "save": "Find parts that fit",
+      "saved": "Saved to your garage: {label}",
+      "loadError": "We could not load the vehicle list. Check your connection and try again.",
+      "cleared": "Vehicle removed from your garage.",
+      "garage": "My Garage",
+      "selectVehicle": "Select your vehicle",
+      "garageWithVehicle": "My Garage: {label}. Change vehicle",
+      "openSelector": "My Garage: select your vehicle",
+      "dialogTitle": "My Garage",
+      "dialogCurrent": "Showing parts that fit your {label}.",
+      "dialogDescription": "Pick your vehicle once and every page shows only parts that fit.",
+      "manageGarage": "Open garage",
+      "remove": "Remove vehicle",
+      "partsFit": "{count, plural, one {# part fits} other {# parts fit}}"
+    }
+  }
+}

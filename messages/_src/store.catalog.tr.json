@@ -1,0 +1,97 @@
+{
+  "store": {
+    "shop": {
+      "metaTitle": "Tüm oto yedek parçalar",
+      "metaDescription": "Fren, motor, süspansiyon, filtre, aydınlatma ve daha fazlasına göz atın. Aracınıza göre filtreleyin, tam uyumlu parçaları alın.",
+      "home": "Ana sayfa",
+      "title": "Tüm parçalar",
+      "description": "Stoktaki her parça, garajınızdaki araca göre eşleştirilmiş. Marka, fiyat ve stok durumuna göre filtreleyin."
+    },
+    "listing": {
+      "categories": "Kategoriler",
+      "brands": "Markalar",
+      "showAllBrands": "{count} markanın tümünü göster",
+      "showFewerBrands": "Daha az marka göster",
+      "price": "Fiyat",
+      "priceMin": "En az",
+      "priceMax": "En çok",
+      "applyPrice": "Fiyatı uygula",
+      "availability": "Stok durumu",
+      "inStock": "Stokta var",
+      "onSale": "İndirimde",
+      "rating": "Müşteri puanı",
+      "ratingAndUp": "{rating} ve üzeri",
+      "filters": "Filtreler",
+      "showResults": "Sonuçları göster",
+      "sortBy": "Sırala",
+      "sort": {
+        "relevance": "En uygun",
+        "featured": "Önerilen",
+        "bestselling": "En çok satan",
+        "newest": "En yeni",
+        "price_asc": "Fiyat: düşükten yükseğe",
+        "price_desc": "Fiyat: yüksekten düşüğe",
+        "rating": "En yüksek puanlı",
+        "name_asc": "Ad: A'dan Z'ye"
+      },
+      "chipPriceRange": "{min} - {max}",
+      "chipPriceFrom": "{amount} ve üzeri",
+      "chipPriceTo": "{amount} ve altı",
+      "garageFiltered": "{label} aracınıza uyan parçalar gösteriliyor",
+      "garageFilteredHint": "Uymayan parçalar gizlendi.",
+      "showAllParts": "Tüm parçaları göster",
+      "garageAll": "Tüm parçalar gösteriliyor. Garajınız: {label}",
+      "garageAllHint": "Uyumluluk rozetleri hangi parçaların aracınıza uyduğunu gösterir.",
+      "onlyFitting": "Yalnızca uyan parçalar",
+      "resultsHeading": "Sonuçlar",
+      "noParts": "Parça bulunamadı",
+      "showing": "{total, plural, one {# parça} other {# parça}} içinden {from}-{to} arası gösteriliyor",
+      "activeFilters": "Etkin filtreler",
+      "removeFilter": "Filtreyi kaldır",
+      "clearFilters": "Tüm filtreleri temizle",
+      "didYouMean": "Bunu mu demek istediniz:",
+      "emptyTitle": "Eşleşen parça yok",
+      "emptyFiltered": "Bir filtreyi kaldırmayı veya daha genel bir arama yapmayı deneyin.",
+      "emptyBody": "Burada henüz parça yok. Yakında tekrar bakın.",
+      "headerMeta": "{parts} parça / {subs} alt grup"
+    },
+    "category": {
+      "home": "Ana sayfa",
+      "shop": "Mağaza",
+      "subcategories": "Alt kategoriler"
+    },
+    "brand": {
+      "metaTitle": "{name} parçaları",
+      "home": "Ana sayfa",
+      "brands": "Markalar",
+      "logoAlt": "{name} logosu",
+      "origin": "Menşei"
+    },
+    "brands": {
+      "metaTitle": "Tüm markalar",
+      "metaDescription": "Oto yedek parçaları markaya göre alın: kendi APEXLINE Select serimizden fren, filtre, aydınlatma ve daha fazlasında güvenilir markalara.",
+      "home": "Ana sayfa",
+      "title": "Markalar",
+      "description": "Stokta bulundurduğumuz her üretici; hepsi kataloğumuzdaki araçlara göre uyumluluk kontrolünden geçmiştir.",
+      "featured": "Öne çıkan markalar",
+      "all": "Diğer markalar",
+      "parts": "{count, plural, one {# parça} other {# parça}}"
+    },
+    "deals": {
+      "metaTitle": "Fırsatlar ve indirimli parçalar",
+      "metaDescription": "Stoklar tükenene kadar indirimli fren, filtre, aydınlatma ve daha fazlası. Her hafta güncellenir.",
+      "home": "Ana sayfa",
+      "title": "Fırsatlar",
+      "description": "Stoktan indirimli parçalar. Fiyatlar yalnızca stoklar tükenene kadar geçerlidir."
+    },
+    "search": {
+      "pageTitle": "Arama",
+      "pageTitleQuery": "\"{query}\" için arama sonuçları",
+      "home": "Ana sayfa",
+      "emptyIntro": "Parça adı, marka, stok kodu, parça numarası veya OEM numarasıyla arayın.",
+      "popular": "Popüler aramalar",
+      "browse": "Ya da kategoriye göz atın",
+      "heading": "\"{query}\" için sonuçlar"
+    }
+  }
+}

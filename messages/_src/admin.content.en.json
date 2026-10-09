@@ -1,0 +1,167 @@
+{
+  "admin": {
+    "banners": {
+      "title": "Banners",
+      "subtitle": "Hero slides, promo tiles and the announcement bar shown on the storefront.",
+      "new": "New banner",
+      "newTitle": "New banner",
+      "editTitle": "Edit banner",
+      "empty": "No banners yet.",
+      "always": "Always",
+      "live": "Live",
+      "scheduled": "Scheduled",
+      "off": "Off",
+      "edit": "Edit {title}",
+      "delete": "Delete {title}",
+      "deleteTitle": "Delete this banner?",
+      "deleteBody": "The banner disappears from the storefront immediately.",
+      "deleteConfirm": "Delete banner",
+      "deleted": "Banner deleted.",
+      "cols": {
+        "banner": "Banner",
+        "placement": "Placement",
+        "link": "Link",
+        "schedule": "Schedule",
+        "order": "Order",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "placements": {
+        "home_hero": "Home hero",
+        "home_promo": "Home promo",
+        "announcement": "Announcement bar",
+        "category_top": "Category top"
+      },
+      "form": {
+        "placement": "Placement",
+        "tone": "Style",
+        "toneHint": "Colour treatment of the banner.",
+        "tones": {
+          "dark": "Dark",
+          "orange": "Orange",
+          "light": "Light"
+        },
+        "sortOrder": "Sort order",
+        "title": "Headline",
+        "subtitle": "Supporting text",
+        "ctaLabel": "Button label",
+        "ctaHref": "Button link",
+        "ctaHrefHint": "A store path such as /shop or a full https:// address.",
+        "image": "Image",
+        "startsAt": "Starts",
+        "endsAt": "Ends",
+        "scheduleHint": "Optional. Leave both empty to show it right away and keep it up.",
+        "active": "Active",
+        "activeHint": "Inactive banners are never shown.",
+        "saved": "Banner saved."
+      }
+    },
+    "pages": {
+      "title": "Pages",
+      "subtitle": "Static content such as About, Shipping and Returns, written in English and Turkish.",
+      "new": "New page",
+      "empty": "No pages yet.",
+      "published": "Published",
+      "draft": "Draft",
+      "inFooter": "In footer",
+      "translated": "Both languages",
+      "missingTranslation": "Turkish missing",
+      "viewLive": "View live page",
+      "delete": "Delete {title}",
+      "deleteTitle": "Delete {title}?",
+      "deleteBody": "The page and its address are removed from the storefront.",
+      "deleteConfirm": "Delete page",
+      "deleted": "Page deleted.",
+      "cols": {
+        "title": "Title",
+        "slug": "Address",
+        "status": "Status",
+        "translation": "Translation",
+        "updated": "Updated",
+        "actions": "Actions"
+      },
+      "form": {
+        "content": "Content",
+        "title": "Title",
+        "body": "Body",
+        "bodyHint": "Markdown: headings, paragraphs, lists, bold, italic, links, tables and rules. Raw HTML is dropped.",
+        "seo": "Search engines",
+        "seoDescription": "Meta description",
+        "publishing": "Publishing",
+        "published": "Published",
+        "publishedHint": "Unpublished pages return a 404 on the storefront.",
+        "showInFooter": "Show in footer",
+        "showInFooterHint": "Adds a link to the storefront footer.",
+        "slug": "Address (slug)",
+        "slugHint": "Used in the URL: /pages/your-slug.",
+        "sortOrder": "Sort order",
+        "create": "Create page",
+        "saved": "Page saved."
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "subtitle": "{count, plural, one {# message} other {# messages}} from the contact form.",
+      "searchPlaceholder": "Name, email, subject, text...",
+      "empty": "No messages match.",
+      "cols": {
+        "from": "From",
+        "subject": "Message",
+        "status": "Status",
+        "received": "Received"
+      },
+      "filters": {
+        "status": "Status",
+        "all": "All messages",
+        "new": "New",
+        "read": "Read",
+        "replied": "Replied",
+        "archived": "Archived"
+      },
+      "detail": {
+        "from": "From",
+        "phone": "Phone",
+        "order": "Order",
+        "received": "Received",
+        "status": "Status",
+        "mark_new": "New",
+        "mark_read": "Read",
+        "mark_replied": "Replied",
+        "mark_archived": "Archived",
+        "updated": "Status updated.",
+        "notes": "Internal notes",
+        "notesHint": "Only staff can see these.",
+        "notesSaved": "Notes saved.",
+        "saveNotes": "Save notes",
+        "reply": "Reply by email",
+        "delete": "Delete",
+        "deleteTitle": "Delete this message?",
+        "deleteBody": "The message is removed for good.",
+        "deleteConfirm": "Delete message",
+        "deleted": "Message deleted."
+      }
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "subtitle": "{count, plural, one {# subscriber} other {# subscribers}}.",
+      "searchPlaceholder": "Search by email...",
+      "export": "Export CSV",
+      "empty": "No subscribers yet.",
+      "subscribed": "Subscribed",
+      "unsubscribed": "Unsubscribed",
+      "delete": "Delete {email}",
+      "deleteTitle": "Remove {email}?",
+      "deleteBody": "The address is deleted from the list.",
+      "deleteConfirm": "Remove subscriber",
+      "deleted": "Subscriber removed.",
+      "cols": {
+        "email": "Email",
+        "language": "Language",
+        "source": "Source",
+        "subscribed": "Subscribed",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "auth": {
+    "shell": {
+      "headline": "Tam oturan parçalar. İlk seferde.",
+      "pointFitmentTitle": "Aracınıza göre eşleşir",
+      "pointFitmentBody": "Aracınızı bir kez kaydedin, yalnızca ona uyan parçaları görün.",
+      "pointShippingTitle": "Stoktan hızlı gönderim",
+      "pointShippingBody": "Stoktaki siparişler bir iş günü içinde depodan çıkar.",
+      "pointSupportTitle": "Atölye kalitesinde destek",
+      "pointSupportBody": "Uyumluluk ve montaj sorularınızı gerçek teknisyenler yanıtlar."
+    },
+    "password": {
+      "show": "Şifreyi göster",
+      "hide": "Şifreyi gizle",
+      "rulesLabel": "Şifre gereksinimleri",
+      "ruleLength": "En az 10 karakter",
+      "ruleCase": "Büyük ve küçük harf",
+      "ruleNumber": "En az bir rakam",
+      "ruleMet": "(sağlandı)",
+      "ruleUnmet": "(henüz sağlanmadı)"
+    },
+    "login": {
+      "metaTitle": "Giriş yap",
+      "title": "Giriş yap",
+      "subtitle": "Tekrar hoş geldiniz. Kaldığınız yerden devam edin.",
+      "nextNotice": "Devam etmek için giriş yapın.",
+      "email": "E-posta adresi",
+      "password": "Şifre",
+      "forgot": "Şifrenizi mi unuttunuz?",
+      "submit": "Giriş yap",
+      "submitting": "Giriş yapılıyor...",
+      "noAccount": "APEXLINE'a yeni misiniz?",
+      "register": "Hesap oluşturun"
+    },
+    "register": {
+      "metaTitle": "Hesap oluştur",
+      "title": "Hesabınızı oluşturun",
+      "subtitle": "Siparişlerinizi takip edin, garajınızı kaydedin ve daha hızlı ödeme yapın.",
+      "name": "Ad soyad",
+      "email": "E-posta adresi",
+      "password": "Şifre",
+      "confirmPassword": "Şifreyi onaylayın",
+      "marketing": "Bana kampanya ve yeni ürün haberleri gönderin. İstediğiniz zaman abonelikten çıkabilirsiniz.",
+      "terms": "<terms>Kullanım Koşulları</terms>'nı ve <privacy>Gizlilik Politikası</privacy>'nı kabul ediyorum.",
+      "submit": "Hesap oluştur",
+      "submitting": "Hesap oluşturuluyor...",
+      "haveAccount": "Zaten hesabınız var mı?",
+      "signIn": "Giriş yapın"
+    },
+    "forgot": {
+      "metaTitle": "Şifrenizi sıfırlayın",
+      "title": "Şifrenizi sıfırlayın",
+      "subtitle": "E-posta adresinizi girin, yeni şifre belirlemeniz için size bir bağlantı gönderelim.",
+      "email": "E-posta adresi",
+      "submit": "Sıfırlama bağlantısı gönder",
+      "sentTitle": "Gelen kutunuzu kontrol edin",
+      "sentBody": "{email} adresine kayıtlı bir hesap varsa sıfırlama bağlantısı yola çıktı. Bağlantı bir saat geçerlidir.",
+      "sentHint": "Hâlâ gelmedi mi? Spam klasörünüze bakın veya birkaç dakika sonra tekrar deneyin.",
+      "tryAnother": "Başka bir e-posta kullan",
+      "back": "Girişe dön"
+    },
+    "reset": {
+      "metaTitle": "Yeni şifre belirleyin",
+      "title": "Yeni şifre belirleyin",
+      "subtitle": "Başka yerde kullanmadığınız güçlü bir şifre seçin.",
+      "newPassword": "Yeni şifre",
+      "confirmPassword": "Yeni şifreyi onaylayın",
+      "submit": "Yeni şifreyi kaydet",
+      "successTitle": "Şifre güncellendi",
+      "successBody": "Şifreniz değiştirildi ve diğer cihazlardaki oturumlar kapatıldı. Şimdi giriş yapabilirsiniz.",
+      "signIn": "Girişe git",
+      "invalidTitle": "Bu bağlantının süresi dolmuş",
+      "invalidBody": "Sıfırlama bağlantıları tek kullanımlıktır ve bir saat sonra geçerliliğini yitirir. Devam etmek için yenisini isteyin.",
+      "requestNew": "Yeni bağlantı iste"
+    },
+    "verify": {
+      "metaTitle": "E-postanızı doğrulayın",
+      "errorTitle": "E-postanızı doğrulayamadık",
+      "errorBody": "Doğrulama bağlantısı geçersiz veya süresi dolmuş. Aşağıdan yenisini isteyin.",
+      "signIn": "Giriş yap",
+      "verifiedTitle": "E-posta doğrulandı",
+      "verifiedBody": "Teşekkürler, e-posta adresiniz doğrulandı.",
+      "continue": "Devam et",
+      "signedOutTitle": "E-postanızı doğrulayın",
+      "signedOutBody": "E-posta doğrulama durumunuzu görmek için giriş yapın.",
+      "sentTitle": "Hesabınız oluşturuldu. Gelen kutunuza bakın",
+      "sentBody": "{email} adresine bir doğrulama bağlantısı gönderdik. Hemen alışverişe başlayabilirsiniz.",
+      "pendingTitle": "E-postanız henüz doğrulanmadı",
+      "pendingBody": "Adresinizi doğrulamak için {email} adresine gönderdiğimiz bağlantıyı açın.",
+      "startShopping": "Alışverişe başla",
+      "noEmail": "E-posta ulaşmadı mı?",
+      "resend": "Bağlantıyı yeniden gönder",
+      "resendSent": "Tamam. Yeni bir doğrulama bağlantısı yola çıktı."
+    }
+  }
+}

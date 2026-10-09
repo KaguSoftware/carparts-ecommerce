@@ -1,0 +1,191 @@
+{
+  "checkout": {
+    "metaTitle": "Checkout",
+    "title": "Checkout",
+    "reviewCart": "Review your cart",
+    "header": {
+      "skipToContent": "Skip to checkout",
+      "home": "APEXLINE Auto Parts home",
+      "secure": "Secure checkout",
+      "backToCart": "Back to cart",
+      "footer": "© {year} APEXLINE Auto Parts. All rights reserved.",
+      "legal": "Legal and help",
+      "returns": "Returns",
+      "privacy": "Privacy",
+      "help": "Help"
+    },
+    "empty": {
+      "title": "Nothing to check out",
+      "body": "Your cart is empty. Add a part and come back here to pay.",
+      "maintenanceTitle": "Checkout is paused",
+      "maintenanceBody": "The store is temporarily unavailable. Your cart is saved, please check back soon.",
+      "continueShopping": "Continue shopping",
+      "viewCart": "View cart"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email address",
+      "emailHint": "We send your order confirmation and tracking here.",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "signedInAs": "Signed in as {email}. Your order confirmation goes to this address.",
+      "newsletter": "Email me offers and new-arrival news"
+    },
+    "shipping": {
+      "title": "Delivery address",
+      "savedAddresses": "Saved addresses",
+      "useNew": "Deliver to a new address",
+      "saveAddress": "Save this address to my address book"
+    },
+    "method": {
+      "title": "Shipping method",
+      "legend": "Choose a shipping method",
+      "none": "We cannot ship to this address yet. Check the country and region, or contact us for a quote.",
+      "free": "Free",
+      "daysSingle": "{count, plural, one {Arrives in # business day} other {Arrives in # business days}}",
+      "daysRange": "Arrives in {min}-{max} business days"
+    },
+    "coupon": {
+      "title": "Discount code",
+      "label": "Discount code",
+      "placeholder": "Enter code",
+      "apply": "Apply",
+      "applied": "Code {code} applied",
+      "remove": "Remove code {code}"
+    },
+    "payment": {
+      "title": "Payment",
+      "failedTitle": "Payment not completed",
+      "failedHelp": "Nothing was charged. Check the card details or try another card.",
+      "cardNumber": "Card number",
+      "expiry": "Expiry",
+      "expiryPlaceholder": "MM / YY",
+      "cvc": "Security code",
+      "cvcHint": "3 digits on the back of the card.",
+      "cvcHintAmex": "4 digits on the front of the card.",
+      "holder": "Name on card",
+      "secureNote": "Payments are encrypted. Card details are sent only to the payment provider and are never stored by us.",
+      "brands": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "Amex",
+        "discover": "Discover",
+        "diners": "Diners",
+        "jcb": "JCB",
+        "unionpay": "UnionPay"
+      }
+    },
+    "testCards": {
+      "title": "Test cards (demo payment gateway)",
+      "body": "This store runs on a mock gateway. Use these numbers with any future expiry date and any security code.",
+      "use": "Use",
+      "cases": {
+        "success": "Successful payment",
+        "declined": "Card declined",
+        "insufficient": "Insufficient funds",
+        "expired": "Expired card",
+        "error": "Processing error",
+        "threeDs": "3-D Secure verification"
+      }
+    },
+    "billing": {
+      "sameAsShipping": "Billing address is the same as the delivery address",
+      "title": "Billing address"
+    },
+    "finish": {
+      "label": "Place your order",
+      "note": "Note for the order",
+      "terms": "I have read and accept the <terms>Terms of Service</terms> and the <returns>Returns Policy</returns>.",
+      "pay": "Pay {amount}",
+      "processing": "Processing payment...",
+      "reassurance": "You will see a final confirmation after the payment succeeds.",
+      "needShipping": "Choose a delivery address and shipping method to continue."
+    },
+    "summary": {
+      "show": "Show order slip",
+      "title": "Order slip",
+      "editCart": "Edit cart",
+      "itemsLabel": "{count, plural, one {# item in your order} other {# items in your order}}",
+      "quantity": "Quantity:",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "discountWithCode": "Discount ({code})",
+      "shipping": "Shipping",
+      "shippingPending": "Choose a method",
+      "free": "Free",
+      "tax": "Tax",
+      "total": "Total",
+      "chargeNote": "You will be charged {amount} in {currency}. The conversion rate is fixed when you place the order.",
+      "coupon": "Discount code"
+    },
+    "threeDs": {
+      "title": "Verify this payment",
+      "body": "Your bank needs you to approve a payment of {amount}.",
+      "explainer": "This is an extra security step required by your bank. In this demo you play the bank: approve or reject the payment.",
+      "approve": "Approve payment",
+      "decline": "Reject",
+      "processing": "Contacting your bank...",
+      "waiting": "Waiting for your decision."
+    },
+    "order": {
+      "sku": "SKU {sku}",
+      "lineQuantity": "{quantity} × {price}",
+      "refundedQuantity": "{count} refunded",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "discountWithCode": "Discount ({code})",
+      "shipping": "Shipping",
+      "free": "Free",
+      "tax": "Tax",
+      "total": "Total",
+      "refunded": "Refunded",
+      "chargedIn": "Charged {amount} ({currency}) at the rate fixed when you ordered."
+    },
+    "confirmation": {
+      "metaTitle": "Order confirmation",
+      "thanksTitle": "Thank you, your order is in",
+      "thanksBody": "Order {number} is confirmed and goes to the warehouse next.",
+      "notPaidTitle": "Order {number} is not paid",
+      "notPaidBody": "The payment for this order was not completed, so it has not been confirmed yet.",
+      "cancelledBody": "This order was cancelled and will not be shipped.",
+      "retryPayment": "Return to checkout",
+      "orderNumber": "Order number",
+      "date": "Date",
+      "status": "Status",
+      "total": "Total",
+      "emailTitle": "Confirmation email",
+      "emailBody": "A receipt is on its way to {email}.",
+      "deliveryTitle": "Estimated delivery",
+      "deliveryBody": "{from} - {to}",
+      "trackTitle": "Track your order",
+      "trackBodyAccount": "Follow every step from your account.",
+      "trackBodyGuest": "Keep your order number and email. You can look up the status any time.",
+      "items": "Items",
+      "progress": "Order progress",
+      "summary": "Order summary",
+      "shippingTo": "Delivering to",
+      "free": "Free",
+      "payment": "Payment",
+      "paidWith": "{brand} card ending {last4}",
+      "noPaymentMethod": "No payment method on record.",
+      "createAccountTitle": "Save time next order",
+      "createAccountBody": "Create an account to track this order, keep your addresses and check out in a few taps.",
+      "createAccount": "Create account",
+      "viewOrder": "View order in my account",
+      "trackOrder": "Track an order",
+      "continueShopping": "Continue shopping",
+      "certificate": "Inspection certificate",
+      "stamp": "Order accepted"
+    },
+    "steps": {
+      "label": "Checkout steps",
+      "contact": "Contact",
+      "shipTo": "Ship to",
+      "method": "Method",
+      "payment": "Payment",
+      "done": "complete",
+      "todo": "to do",
+      "defaultMethod": "Default: {name}"
+    }
+  }
+}

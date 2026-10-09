@@ -1,0 +1,107 @@
+{
+  "engine3d": {
+    "title": "Engine teardown",
+    "subtitle": "Honda K24 i-VTEC, part by part",
+    "body": "Scroll to pull a 2.4 L DOHC inline-four apart. Point at any part to find the matching parts in the shop.",
+    "bodyTouch": "Scroll to pull a 2.4 L DOHC inline-four apart. Tap any part to find the matching parts in the shop.",
+    "bodyManual": "Drag the slider to pull a 2.4 L DOHC inline-four apart. Point at any part to find the matching parts in the shop.",
+    "bodyManualTouch": "Drag the slider to pull a 2.4 L DOHC inline-four apart. Tap any part to find the matching parts in the shop.",
+    "bodyStatic": "A 2.4 L DOHC inline-four, laid out part by part. Point at any part to find the matching parts in the shop.",
+    "bodyStaticTouch": "A 2.4 L DOHC inline-four, laid out part by part. Tap any part to find the matching parts in the shop.",
+    "shopEngine": "Shop engine parts",
+    "regionLabel": "Interactive engine teardown",
+    "canvasLabel": "Interactive exploded view of an inline-four engine. Drag to rotate. The parts list holds a link for every component.",
+    "blueprintLabel": "Exploded blueprint of an inline-four engine, from valve cover at the top to oil pan at the bottom.",
+    "partsList": "Engine parts",
+    "partsListMobile": "Parts list ({count})",
+    "hintScroll": "Scroll to explode",
+    "hintDrag": "Drag to rotate",
+    "assembled": "Assembled",
+    "exploded": "Exploded",
+    "explode": "Explode",
+    "loading": "Loading 3D model",
+    "failed": "The 3D view could not start on this device. The blueprint shows the same parts.",
+    "optIn": "Explore in 3D",
+    "optInReduced": "Motion is reduced on this device, so the 3D view stays off until you ask for it.",
+    "optInSaver": "Data saver or a low-power device is detected, so the 3D view stays off until you ask for it.",
+    "noWebgl": "This browser cannot draw 3D graphics. The blueprint shows the same parts.",
+    "disclaimer": "Illustrative procedural model of a 2.4 L DOHC inline-four, not manufacturer CAD. Honda and i-VTEC are trademarks of their owners; APEXLINE is not affiliated.",
+    "parts": {
+      "valveCover": {
+        "name": "Valve cover",
+        "note": "Closes the top end and keeps the oil where it belongs.",
+        "shop": "Shop gaskets & seals"
+      },
+      "camshafts": {
+        "name": "Camshafts",
+        "note": "Two shafts open the valves. The tall middle intake lobe is the VTEC high cam.",
+        "shop": "Shop camshafts"
+      },
+      "camGears": {
+        "name": "Cam gears",
+        "note": "Phase each camshaft against the crank. The intake gear carries the variable-timing actuator.",
+        "shop": "Shop belts & timing"
+      },
+      "rockerArms": {
+        "name": "VTEC rocker arms",
+        "note": "A locking pin joins the three intake rockers at high rpm.",
+        "shop": "Shop rocker arms"
+      },
+      "cylinderHead": {
+        "name": "Cylinder head",
+        "note": "Combustion chambers, ports and valve seats in one casting.",
+        "shop": "Shop cylinder heads"
+      },
+      "valves": {
+        "name": "Valves & springs",
+        "note": "Four valves per cylinder: two intake, two exhaust.",
+        "shop": "Shop valves & springs"
+      },
+      "headGasket": {
+        "name": "Head gasket",
+        "note": "A layered steel seal between block and head.",
+        "shop": "Shop gaskets & seals"
+      },
+      "block": {
+        "name": "Engine block",
+        "note": "The cast cylinder block with 87 mm bores and five main bearings.",
+        "shop": "Shop engine blocks"
+      },
+      "pistons": {
+        "name": "Pistons & rings",
+        "note": "Aluminium pistons with a three-ring pack seal the combustion.",
+        "shop": "Shop pistons & rings"
+      },
+      "conrods": {
+        "name": "Connecting rods",
+        "note": "Forged I-beam rods link each piston to the crank.",
+        "shop": "Shop connecting rods"
+      },
+      "crankshaft": {
+        "name": "Crankshaft",
+        "note": "Counterweights balance the throws and turn piston thrust into torque.",
+        "shop": "Shop crankshafts"
+      },
+      "oilPan": {
+        "name": "Oil pan",
+        "note": "The sump that holds the engine oil.",
+        "shop": "Shop engine oil"
+      },
+      "intakeManifold": {
+        "name": "Intake manifold",
+        "note": "Splits the air from the throttle body into four runners.",
+        "shop": "Shop air filters"
+      },
+      "exhaustManifold": {
+        "name": "Exhaust manifold",
+        "note": "Collects the burnt gas from four ports into one outlet.",
+        "shop": "Shop exhaust"
+      },
+      "timingChain": {
+        "name": "Timing chain",
+        "note": "A roller chain drives both camshafts from the crank.",
+        "shop": "Shop belts & timing"
+      }
+    }
+  }
+}

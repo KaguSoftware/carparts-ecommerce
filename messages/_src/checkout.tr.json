@@ -1,0 +1,191 @@
+{
+  "checkout": {
+    "metaTitle": "Ödeme",
+    "title": "Ödeme",
+    "reviewCart": "Sepetinizi gözden geçirin",
+    "header": {
+      "skipToContent": "Ödemeye geç",
+      "home": "APEXLINE Auto Parts ana sayfa",
+      "secure": "Güvenli ödeme",
+      "backToCart": "Sepete dön",
+      "footer": "© {year} APEXLINE Auto Parts. Tüm hakları saklıdır.",
+      "legal": "Yasal bilgiler ve yardım",
+      "returns": "İade",
+      "privacy": "Gizlilik",
+      "help": "Yardım"
+    },
+    "empty": {
+      "title": "Ödenecek bir şey yok",
+      "body": "Sepetiniz boş. Bir parça ekleyin ve ödemek için buraya dönün.",
+      "maintenanceTitle": "Ödeme geçici olarak durduruldu",
+      "maintenanceBody": "Mağaza geçici olarak kullanılamıyor. Sepetiniz kayıtlı, lütfen biraz sonra tekrar deneyin.",
+      "continueShopping": "Alışverişe devam et",
+      "viewCart": "Sepeti gör"
+    },
+    "contact": {
+      "title": "İletişim",
+      "email": "E-posta adresi",
+      "emailHint": "Sipariş onayınızı ve takip bilgilerinizi buraya göndeririz.",
+      "haveAccount": "Zaten hesabınız var mı?",
+      "signIn": "Giriş yapın",
+      "signedInAs": "{email} olarak giriş yaptınız. Sipariş onayınız bu adrese gönderilecek.",
+      "newsletter": "Bana kampanya ve yeni ürün haberleri gönderin"
+    },
+    "shipping": {
+      "title": "Teslimat adresi",
+      "savedAddresses": "Kayıtlı adresler",
+      "useNew": "Yeni bir adrese gönder",
+      "saveAddress": "Bu adresi adres defterime kaydet"
+    },
+    "method": {
+      "title": "Kargo yöntemi",
+      "legend": "Bir kargo yöntemi seçin",
+      "none": "Bu adrese henüz gönderim yapamıyoruz. Ülke ve bölgeyi kontrol edin veya fiyat teklifi için bize ulaşın.",
+      "free": "Ücretsiz",
+      "daysSingle": "{count, plural, one {# iş gününde teslim} other {# iş gününde teslim}}",
+      "daysRange": "{min}-{max} iş gününde teslim"
+    },
+    "coupon": {
+      "title": "İndirim kodu",
+      "label": "İndirim kodu",
+      "placeholder": "Kodu girin",
+      "apply": "Uygula",
+      "applied": "{code} kodu uygulandı",
+      "remove": "{code} kodunu kaldır"
+    },
+    "payment": {
+      "title": "Ödeme",
+      "failedTitle": "Ödeme tamamlanamadı",
+      "failedHelp": "Hesabınızdan para çekilmedi. Kart bilgilerini kontrol edin veya başka bir kart deneyin.",
+      "cardNumber": "Kart numarası",
+      "expiry": "Son kullanma tarihi",
+      "expiryPlaceholder": "AA / YY",
+      "cvc": "Güvenlik kodu",
+      "cvcHint": "Kartın arkasındaki 3 haneli kod.",
+      "cvcHintAmex": "Kartın önündeki 4 haneli kod.",
+      "holder": "Kart üzerindeki ad",
+      "secureNote": "Ödemeler şifrelenir. Kart bilgileriniz yalnızca ödeme sağlayıcısına iletilir, bizde saklanmaz.",
+      "brands": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "Amex",
+        "discover": "Discover",
+        "diners": "Diners",
+        "jcb": "JCB",
+        "unionpay": "UnionPay"
+      }
+    },
+    "testCards": {
+      "title": "Test kartları (demo ödeme geçidi)",
+      "body": "Bu mağaza sahte bir ödeme geçidiyle çalışır. Bu numaraları, ileri bir tarihli son kullanma tarihi ve herhangi bir güvenlik koduyla kullanın.",
+      "use": "Kullan",
+      "cases": {
+        "success": "Başarılı ödeme",
+        "declined": "Kart reddedildi",
+        "insufficient": "Yetersiz bakiye",
+        "expired": "Süresi dolmuş kart",
+        "error": "İşlem hatası",
+        "threeDs": "3-D Secure doğrulaması"
+      }
+    },
+    "billing": {
+      "sameAsShipping": "Fatura adresi teslimat adresiyle aynı",
+      "title": "Fatura adresi"
+    },
+    "finish": {
+      "label": "Siparişi tamamla",
+      "note": "Sipariş notu",
+      "terms": "<terms>Kullanım Koşulları</terms>'nı ve <returns>İade Politikası</returns>'nı okudum, kabul ediyorum.",
+      "pay": "{amount} öde",
+      "processing": "Ödeme işleniyor...",
+      "reassurance": "Ödeme başarılı olduktan sonra son bir onay sayfası göreceksiniz.",
+      "needShipping": "Devam etmek için teslimat adresi ve kargo yöntemi seçin."
+    },
+    "summary": {
+      "show": "Sipariş fişini göster",
+      "title": "Sipariş fişi",
+      "editCart": "Sepeti düzenle",
+      "itemsLabel": "{count, plural, one {Siparişinizde # ürün var} other {Siparişinizde # ürün var}}",
+      "quantity": "Adet:",
+      "subtotal": "Ara toplam",
+      "discount": "İndirim",
+      "discountWithCode": "İndirim ({code})",
+      "shipping": "Kargo",
+      "shippingPending": "Yöntem seçin",
+      "free": "Ücretsiz",
+      "tax": "Vergi",
+      "total": "Toplam",
+      "chargeNote": "Hesabınızdan {currency} cinsinden {amount} çekilecek. Kur, siparişi verdiğiniz anda sabitlenir.",
+      "coupon": "İndirim kodu"
+    },
+    "threeDs": {
+      "title": "Bu ödemeyi doğrulayın",
+      "body": "Bankanız {amount} tutarındaki ödemeyi onaylamanızı istiyor.",
+      "explainer": "Bu, bankanızın istediği ek bir güvenlik adımıdır. Bu demoda bankanın rolünü siz üstleniyorsunuz: ödemeyi onaylayın veya reddedin.",
+      "approve": "Ödemeyi onayla",
+      "decline": "Reddet",
+      "processing": "Bankanızla görüşülüyor...",
+      "waiting": "Kararınız bekleniyor."
+    },
+    "order": {
+      "sku": "Stok kodu {sku}",
+      "lineQuantity": "{quantity} × {price}",
+      "refundedQuantity": "{count} adet iade edildi",
+      "subtotal": "Ara toplam",
+      "discount": "İndirim",
+      "discountWithCode": "İndirim ({code})",
+      "shipping": "Kargo",
+      "free": "Ücretsiz",
+      "tax": "Vergi",
+      "total": "Toplam",
+      "refunded": "İade edilen",
+      "chargedIn": "Sipariş anında sabitlenen kurla {amount} ({currency}) tahsil edildi."
+    },
+    "confirmation": {
+      "metaTitle": "Sipariş onayı",
+      "thanksTitle": "Teşekkürler, siparişiniz alındı",
+      "thanksBody": "{number} numaralı sipariş onaylandı ve sıradaki adımda depoya iletilecek.",
+      "notPaidTitle": "{number} numaralı sipariş ödenmedi",
+      "notPaidBody": "Bu siparişin ödemesi tamamlanmadığı için henüz onaylanmadı.",
+      "cancelledBody": "Bu sipariş iptal edildi ve gönderilmeyecek.",
+      "retryPayment": "Ödemeye dön",
+      "orderNumber": "Sipariş numarası",
+      "date": "Tarih",
+      "status": "Durum",
+      "total": "Toplam",
+      "emailTitle": "Onay e-postası",
+      "emailBody": "Makbuzunuz {email} adresine gönderiliyor.",
+      "deliveryTitle": "Tahmini teslimat",
+      "deliveryBody": "{from} - {to}",
+      "trackTitle": "Siparişinizi takip edin",
+      "trackBodyAccount": "Her adımı hesabınızdan izleyin.",
+      "trackBodyGuest": "Sipariş numaranızı ve e-postanızı saklayın. Durumu istediğiniz zaman sorgulayabilirsiniz.",
+      "items": "Ürünler",
+      "progress": "Sipariş durumu",
+      "summary": "Sipariş özeti",
+      "shippingTo": "Teslimat adresi",
+      "free": "Ücretsiz",
+      "payment": "Ödeme",
+      "paidWith": "{last4} ile biten {brand} kart",
+      "noPaymentMethod": "Kayıtlı ödeme yöntemi yok.",
+      "createAccountTitle": "Bir sonraki siparişte zaman kazanın",
+      "createAccountBody": "Bu siparişi takip etmek, adreslerinizi saklamak ve birkaç dokunuşla ödeme yapmak için hesap oluşturun.",
+      "createAccount": "Hesap oluştur",
+      "viewOrder": "Siparişi hesabımda gör",
+      "trackOrder": "Sipariş sorgula",
+      "continueShopping": "Alışverişe devam et",
+      "certificate": "Muayene belgesi",
+      "stamp": "Sipariş onaylandı"
+    },
+    "steps": {
+      "label": "Ödeme adımları",
+      "contact": "İletişim",
+      "shipTo": "Teslimat",
+      "method": "Yöntem",
+      "payment": "Ödeme",
+      "done": "tamamlandı",
+      "todo": "bekliyor",
+      "defaultMethod": "Varsayılan: {name}"
+    }
+  }
+}

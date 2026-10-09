@@ -1,0 +1,76 @@
+{
+  "store": {
+    "home": {
+      "hero": {
+        "headlineFallback": "Exact fit.",
+        "subhead": "Every part is checked against your car's make, model, year and engine before it can reach the cart. Pick your car and the catalogue stops showing what will not fit.",
+        "cta": "Shop brake discs",
+        "browse": "Browse all parts",
+        "dimDiameter": "Ø {value} mm",
+        "dimThickness": "{value} mm thick",
+        "dimBolts": "{count} bolt holes",
+        "tbDrawing": "DWG",
+        "tbRev": "REV",
+        "tbScale": "SCALE",
+        "tbFits": "FITS",
+        "fitsVehicles": "{count, plural, one {# vehicle} other {# vehicles}}",
+        "headlineSpec": "{a} × {b} × {c}.",
+        "headlineTail": "Or it doesn't ship."
+      },
+      "finder": {
+        "title": "Find parts for your car",
+        "hint": "Make / model / year / engine. Pick your car once, we only show what fits.",
+        "submit": "Find parts",
+        "yourGarage": "Your garage",
+        "garageHint": "Every page now shows fit badges for this vehicle.",
+        "shopFitting": "Shop parts that fit",
+        "changeVehicle": "Change vehicle"
+      },
+      "categoriesTitle": "Shop by assembly",
+      "allParts": "All parts",
+      "partCount": "{count, plural, one {# part} other {# parts}}",
+      "dealsTitle": "This week's deals",
+      "dealsBody": "Marked down from stock while it lasts. Same part numbers, lower price.",
+      "allDeals": "All deals",
+      "bestTitle": "Best sellers",
+      "newTitle": "Just in",
+      "brandsTitle": "Brand index",
+      "allBrands": "All brands",
+      "promosLabel": "Promotions",
+      "partsSr": "parts",
+      "colPartNo": "Part no.",
+      "colPart": "Part",
+      "colSpec": "Spec",
+      "colFit": "Fit",
+      "colPrice": "Price",
+      "colStock": "Stock",
+      "colAdd": "Add to cart",
+      "view": "View",
+      "brandParts": "{count, plural, one {# part} other {# parts}}",
+      "bulletin": "Bulletin {n}",
+      "service": {
+        "label": "Service specification",
+        "fitment": {
+          "key": "Fitment",
+          "value": "Guaranteed",
+          "note": "Every part is matched to your vehicle or we take it back."
+        },
+        "dispatch": {
+          "key": "Dispatch",
+          "value": "15:00 cut-off",
+          "note": "Order before 3 pm and it leaves our warehouse today."
+        },
+        "returns": {
+          "key": "Returns",
+          "value": "30 days",
+          "note": "Unused parts can go back, no questions about why."
+        },
+        "support": {
+          "key": "Tech line",
+          "value": "Mon-Sat",
+          "note": "Talk to people who have turned the spanners themselves. Mon-Fri 08-18, Sat 09-14."
+        }
+      }
+    }
+  }
+}

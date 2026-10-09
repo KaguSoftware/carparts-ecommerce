@@ -1,0 +1,96 @@
+{
+  "auth": {
+    "shell": {
+      "headline": "Parts that fit. The first time.",
+      "pointFitmentTitle": "Matched to your vehicle",
+      "pointFitmentBody": "Save your car once and see only the parts that fit it.",
+      "pointShippingTitle": "Shipped from stock",
+      "pointShippingBody": "In-stock orders leave our warehouse within one business day.",
+      "pointSupportTitle": "Workshop-grade support",
+      "pointSupportBody": "Real technicians answer fitment and installation questions."
+    },
+    "password": {
+      "show": "Show password",
+      "hide": "Hide password",
+      "rulesLabel": "Password requirements",
+      "ruleLength": "At least 10 characters",
+      "ruleCase": "Upper and lower case letters",
+      "ruleNumber": "At least one number",
+      "ruleMet": "(met)",
+      "ruleUnmet": "(not met yet)"
+    },
+    "login": {
+      "metaTitle": "Sign in",
+      "title": "Sign in",
+      "subtitle": "Welcome back. Pick up where you left off.",
+      "nextNotice": "Sign in to continue.",
+      "email": "Email address",
+      "password": "Password",
+      "forgot": "Forgot your password?",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "noAccount": "New to APEXLINE?",
+      "register": "Create an account"
+    },
+    "register": {
+      "metaTitle": "Create account",
+      "title": "Create your account",
+      "subtitle": "Track orders, save your garage and check out faster.",
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "marketing": "Send me offers and new-arrival news. You can unsubscribe at any time.",
+      "terms": "I agree to the <terms>Terms of Service</terms> and the <privacy>Privacy Policy</privacy>.",
+      "submit": "Create account",
+      "submitting": "Creating account...",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "forgot": {
+      "metaTitle": "Reset your password",
+      "title": "Reset your password",
+      "subtitle": "Enter your email and we will send you a link to choose a new password.",
+      "email": "Email address",
+      "submit": "Send reset link",
+      "sentTitle": "Check your inbox",
+      "sentBody": "If an account exists for {email}, a reset link is on its way. The link is valid for one hour.",
+      "sentHint": "Nothing yet? Look in your spam folder, or try again in a few minutes.",
+      "tryAnother": "Use a different email",
+      "back": "Back to sign in"
+    },
+    "reset": {
+      "metaTitle": "Choose a new password",
+      "title": "Choose a new password",
+      "subtitle": "Pick a strong password you have not used elsewhere.",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm new password",
+      "submit": "Save new password",
+      "successTitle": "Password updated",
+      "successBody": "Your password has been changed and other devices were signed out. You can sign in now.",
+      "signIn": "Go to sign in",
+      "invalidTitle": "This link has expired",
+      "invalidBody": "Reset links work once and expire after one hour. Request a new one to continue.",
+      "requestNew": "Request a new link"
+    },
+    "verify": {
+      "metaTitle": "Confirm your email",
+      "errorTitle": "We could not confirm your email",
+      "errorBody": "The confirmation link is invalid or has expired. Request a new one below.",
+      "signIn": "Sign in",
+      "verifiedTitle": "Email confirmed",
+      "verifiedBody": "Thanks, your email address is confirmed.",
+      "continue": "Continue",
+      "signedOutTitle": "Confirm your email",
+      "signedOutBody": "Sign in to check the status of your email confirmation.",
+      "sentTitle": "Account created. Check your inbox",
+      "sentBody": "We sent a confirmation link to {email}. You can start shopping right away.",
+      "pendingTitle": "Your email is not confirmed yet",
+      "pendingBody": "Open the link we sent to {email} to confirm your address.",
+      "startShopping": "Start shopping",
+      "noEmail": "Did not get the email?",
+      "resend": "Send the link again",
+      "resendSent": "Done. A new confirmation link is on its way."
+    }
+  }
+}

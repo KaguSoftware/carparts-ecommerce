@@ -1,0 +1,167 @@
+{
+  "admin": {
+    "banners": {
+      "title": "Bannerlar",
+      "subtitle": "Mağazada gösterilen ana görseller, kampanya kutuları ve duyuru çubuğu.",
+      "new": "Yeni banner",
+      "newTitle": "Yeni banner",
+      "editTitle": "Banner'ı düzenle",
+      "empty": "Henüz banner yok.",
+      "always": "Her zaman",
+      "live": "Yayında",
+      "scheduled": "Planlandı",
+      "off": "Kapalı",
+      "edit": "{title} düzenle",
+      "delete": "{title} sil",
+      "deleteTitle": "Bu banner silinsin mi?",
+      "deleteBody": "Banner mağazadan hemen kaldırılır.",
+      "deleteConfirm": "Banner'ı sil",
+      "deleted": "Banner silindi.",
+      "cols": {
+        "banner": "Banner",
+        "placement": "Konum",
+        "link": "Bağlantı",
+        "schedule": "Zamanlama",
+        "order": "Sıra",
+        "status": "Durum",
+        "actions": "İşlemler"
+      },
+      "placements": {
+        "home_hero": "Ana sayfa üst görsel",
+        "home_promo": "Ana sayfa kampanya",
+        "announcement": "Duyuru çubuğu",
+        "category_top": "Kategori üstü"
+      },
+      "form": {
+        "placement": "Konum",
+        "tone": "Stil",
+        "toneHint": "Banner'ın renk düzeni.",
+        "tones": {
+          "dark": "Koyu",
+          "orange": "Turuncu",
+          "light": "Açık"
+        },
+        "sortOrder": "Sıralama",
+        "title": "Başlık",
+        "subtitle": "Destekleyici metin",
+        "ctaLabel": "Düğme metni",
+        "ctaHref": "Düğme bağlantısı",
+        "ctaHrefHint": "/shop gibi bir mağaza yolu ya da tam bir https:// adresi.",
+        "image": "Görsel",
+        "startsAt": "Başlangıç",
+        "endsAt": "Bitiş",
+        "scheduleHint": "İsteğe bağlı. İkisini de boş bırakırsanız hemen yayınlanır ve yayında kalır.",
+        "active": "Aktif",
+        "activeHint": "Pasif bannerlar hiçbir zaman gösterilmez.",
+        "saved": "Banner kaydedildi."
+      }
+    },
+    "pages": {
+      "title": "Sayfalar",
+      "subtitle": "Hakkımızda, Kargo ve İadeler gibi sabit içerikler; İngilizce ve Türkçe yazılır.",
+      "new": "Yeni sayfa",
+      "empty": "Henüz sayfa yok.",
+      "published": "Yayında",
+      "draft": "Taslak",
+      "inFooter": "Alt bilgide",
+      "translated": "İki dilde de var",
+      "missingTranslation": "Türkçesi eksik",
+      "viewLive": "Yayındaki sayfayı gör",
+      "delete": "{title} sil",
+      "deleteTitle": "{title} silinsin mi?",
+      "deleteBody": "Sayfa ve adresi mağazadan kaldırılır.",
+      "deleteConfirm": "Sayfayı sil",
+      "deleted": "Sayfa silindi.",
+      "cols": {
+        "title": "Başlık",
+        "slug": "Adres",
+        "status": "Durum",
+        "translation": "Çeviri",
+        "updated": "Güncelleme",
+        "actions": "İşlemler"
+      },
+      "form": {
+        "content": "İçerik",
+        "title": "Başlık",
+        "body": "Metin",
+        "bodyHint": "Markdown: başlıklar, paragraflar, listeler, kalın, italik, bağlantılar, tablolar ve ayraçlar. Ham HTML yok sayılır.",
+        "seo": "Arama motorları",
+        "seoDescription": "Meta açıklaması",
+        "publishing": "Yayın",
+        "published": "Yayında",
+        "publishedHint": "Yayında olmayan sayfalar mağazada 404 verir.",
+        "showInFooter": "Alt bilgide göster",
+        "showInFooterHint": "Mağazanın alt bilgisine bir bağlantı ekler.",
+        "slug": "Adres (slug)",
+        "slugHint": "Bağlantıda kullanılır: /pages/sayfa-adresi.",
+        "sortOrder": "Sıralama",
+        "create": "Sayfayı oluştur",
+        "saved": "Sayfa kaydedildi."
+      }
+    },
+    "messages": {
+      "title": "Mesajlar",
+      "subtitle": "İletişim formundan gelen {count} mesaj.",
+      "searchPlaceholder": "Ad, e-posta, konu, metin...",
+      "empty": "Eşleşen mesaj yok.",
+      "cols": {
+        "from": "Gönderen",
+        "subject": "Mesaj",
+        "status": "Durum",
+        "received": "Alındı"
+      },
+      "filters": {
+        "status": "Durum",
+        "all": "Tüm mesajlar",
+        "new": "Yeni",
+        "read": "Okundu",
+        "replied": "Yanıtlandı",
+        "archived": "Arşivlendi"
+      },
+      "detail": {
+        "from": "Gönderen",
+        "phone": "Telefon",
+        "order": "Sipariş",
+        "received": "Alındı",
+        "status": "Durum",
+        "mark_new": "Yeni",
+        "mark_read": "Okundu",
+        "mark_replied": "Yanıtlandı",
+        "mark_archived": "Arşivlendi",
+        "updated": "Durum güncellendi.",
+        "notes": "İç notlar",
+        "notesHint": "Bunları yalnızca ekip görür.",
+        "notesSaved": "Notlar kaydedildi.",
+        "saveNotes": "Notları kaydet",
+        "reply": "E-postayla yanıtla",
+        "delete": "Sil",
+        "deleteTitle": "Bu mesaj silinsin mi?",
+        "deleteBody": "Mesaj kalıcı olarak silinir.",
+        "deleteConfirm": "Mesajı sil",
+        "deleted": "Mesaj silindi."
+      }
+    },
+    "newsletter": {
+      "title": "Bülten",
+      "subtitle": "{count} abone.",
+      "searchPlaceholder": "E-postaya göre ara...",
+      "export": "CSV dışa aktar",
+      "empty": "Henüz abone yok.",
+      "subscribed": "Abone",
+      "unsubscribed": "Abonelikten çıktı",
+      "delete": "{email} sil",
+      "deleteTitle": "{email} kaldırılsın mı?",
+      "deleteBody": "Adres listeden silinir.",
+      "deleteConfirm": "Aboneyi kaldır",
+      "deleted": "Abone kaldırıldı.",
+      "cols": {
+        "email": "E-posta",
+        "language": "Dil",
+        "source": "Kaynak",
+        "subscribed": "Abone olma",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    }
+  }
+}

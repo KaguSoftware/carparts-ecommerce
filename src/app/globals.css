@@ -1,0 +1,643 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   APEXLINE design tokens
+   --------------------------------------------------------------------------
+   One set of semantic tokens drives light AND dark through light-dark().
+   - System preference by default; <html data-theme="light|dark"> forces a theme.
+   - NEVER use Tailwind `dark:` variants. Use the semantic tokens below
+     (bg-surface, text-muted, border-border ...) and both themes just work.
+   - Primary (signal orange) carries graphite text, never white: white on
+     #ff5a1f is 3.1:1, graphite on it is 5.8:1.
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  /* brand constants (theme independent) */
+  --brand-graphite: #14171c;
+  --brand-steel: #2b313a;
+  --brand-orange: #ff5a1f;
+  --brand-amber: #ffb020;
+  --brand-paper: #f4f5f7;
+
+  /* surfaces */
+  --background: light-dark(#f4f5f7, #0d1014);
+  --surface: light-dark(#ffffff, #14171c);
+  --surface-sunken: light-dark(#eaecf0, #0a0c0f);
+  --surface-raised: light-dark(#ffffff, #1b2027);
+  --inverse: #14171c; /* always-dark bands (announcement bar, footer, hero) */
+  --inverse-surface: #1b2027;
+  --inverse-foreground: #f4f5f7;
+  --inverse-muted: #a3adbb;
+  --inverse-border: #2b313a;
+
+  /* drawing paper: a physical sheet that stays light in both themes (hero drawing, title blocks) */
+  --sheet: #f1f2f4;
+  --sheet-ink: #14171c;
+  --sheet-muted: #4b5461;
+  --sheet-line: #b4bcc7;
+  --sheet-faint: #dadee4;
+  --sheet-accent: #c43a00;
+
+  /* text */
+  --foreground: light-dark(#14171c, #f4f5f7);
+  --muted: light-dark(#4b5461, #9aa4b2);
+  --subtle: light-dark(#5f6876, #7c8795); /* placeholders, captions: >=4.5:1 on background (#f4f5f7) and surface */
+
+  /* lines */
+  --border: light-dark(#dadee4, #2b313a);
+  --border-strong: light-dark(#b4bcc7, #414a57);
+
+  /* action */
+  --primary: #ff5a1f;
+  --primary-hover: #ff7340;
+  --primary-active: #e64a10;
+  --primary-foreground: #14171c;
+  --primary-text: light-dark(#c43a00, #ff7a45); /* orange used AS TEXT/links on surfaces (AA) */
+  --primary-soft: light-dark(#ffeee6, #2a1810);
+  --accent: #ffb020;
+  --accent-foreground: #14171c;
+  --accent-soft: light-dark(#fff4d9, #2b2110);
+  --focus: light-dark(#c43a00, #ff8a5b);
+
+  /* secondary (steel) button */
+  --secondary: light-dark(#2b313a, #e6e9ee);
+  --secondary-hover: light-dark(#3a424e, #ffffff);
+  --secondary-foreground: light-dark(#f4f5f7, #14171c);
+
+  /* semantic status (text on *-soft meets AA) */
+  --success: light-dark(#17703f, #4ddb8c);
+  --success-soft: light-dark(#e2f4ea, #0f2a1b);
+  --warning: light-dark(#8f4a00, #ffb020);
+  --warning-soft: light-dark(#fdf0d2, #2b2110);
+  --danger: light-dark(#b3202a, #ff7b7b);
+  --danger-soft: light-dark(#fde7e8, #321416);
+  --danger-solid: light-dark(#b3202a, #ff7b7b); /* filled danger buttons */
+  --danger-solid-foreground: light-dark(#ffffff, #14171c);
+  --info: light-dark(#1b55c0, #7db0ff);
+  --info-soft: light-dark(#e4eefd, #12213b);
+
+  /* logo ink follows the theme */
+  --logo-ink: light-dark(#14171c, #f4f5f7);
+
+  /* depth: offset + soft blur, heavier in dark */
+  --shadow-sm: 0 1px 2px light-dark(rgb(20 23 28 / 0.08), rgb(0 0 0 / 0.5)), 0 1px 1px light-dark(rgb(20 23 28 / 0.04), rgb(0 0 0 / 0.3));
+  --shadow-md: 0 6px 16px -4px light-dark(rgb(20 23 28 / 0.12), rgb(0 0 0 / 0.55)), 0 2px 4px light-dark(rgb(20 23 28 / 0.06), rgb(0 0 0 / 0.35));
+  --shadow-lg: 0 18px 40px -12px light-dark(rgb(20 23 28 / 0.22), rgb(0 0 0 / 0.7)), 0 4px 10px light-dark(rgb(20 23 28 / 0.08), rgb(0 0 0 / 0.4));
+
+  /* radii: machined, not bubbly */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+
+  --header-h: 4.25rem;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* ---- Tailwind theme bridge -------------------------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-surface-raised: var(--surface-raised);
+  --color-inverse: var(--inverse);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-foreground: var(--inverse-foreground);
+  --color-inverse-muted: var(--inverse-muted);
+  --color-inverse-border: var(--inverse-border);
+  --color-sheet: var(--sheet);
+  --color-sheet-ink: var(--sheet-ink);
+  --color-sheet-muted: var(--sheet-muted);
+  --color-sheet-line: var(--sheet-line);
+  --color-sheet-faint: var(--sheet-faint);
+  --color-sheet-accent: var(--sheet-accent);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-text: var(--primary-text);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-focus: var(--focus);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-danger-solid: var(--danger-solid);
+  --color-danger-solid-foreground: var(--danger-solid-foreground);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+
+  --font-sans: var(--ff-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--ff-display), "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--ff-mono), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  --ease-out-expo: var(--ease-out-expo);
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-toast-in: toast-in 320ms var(--ease-out-expo) both;
+  --animate-dialog-in: dialog-in 260ms var(--ease-out-expo) both;
+  --animate-fade-in: fade-in 200ms ease-out both;
+  --animate-drawer-right: drawer-right 320ms var(--ease-out-expo) both;
+  --animate-drawer-left: drawer-left 320ms var(--ease-out-expo) both;
+  --animate-draw: draw 1.5s var(--ease-out-expo) both;
+  --animate-tick-in: tick-in 420ms var(--ease-out-expo) both;
+  --animate-stamp: stamp 520ms var(--ease-out-expo) both;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes tick-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes stamp {
+  0% {
+    opacity: 0;
+    transform: scale(1.4) rotate(-5deg);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(0.96) rotate(0.4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes drawer-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes drawer-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---- Base ------------------------------------------------------------------ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+    accent-color: var(--primary);
+    scrollbar-color: var(--border-strong) transparent;
+    scrollbar-width: thin;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv11", "ss03";
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: 0.005em;
+    text-wrap: balance;
+    text-transform: uppercase;
+  }
+  /* Uppercase Barlow is reserved for page and section titles; card, filter and form headings stay sentence-case. */
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    font-weight: 650;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+  /* Body copy never exceeds a readable measure unless a layout says otherwise */
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  input,
+  textarea {
+    caret-color: var(--primary-text);
+  }
+  a {
+    text-decoration-thickness: 1px;
+  }
+
+  /* Focus: visible, high contrast, offset so it never hides the control edge */
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Form controls inherit the type system */
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+  ::placeholder {
+    color: var(--subtle);
+    opacity: 1;
+  }
+  input[type="number"] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Webkit scrollbars themed from the palette */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--muted);
+    background-clip: content-box;
+    border: 2px solid transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  dialog::backdrop {
+    background: rgb(10 12 15 / 0.62);
+    backdrop-filter: blur(3px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ---- Utilities ------------------------------------------------------------- */
+
+/** Page-width container with fluid gutters (16px mobile -> 32px desktop). */
+@utility container-page {
+  width: 100%;
+  max-width: 82.5rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 0.4rem + 2.4vw, 2rem);
+}
+
+/** Tabular, lining figures for prices, quantities, SKUs, table cells. */
+@utility num {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum", "lnum";
+}
+
+/** Third voice: part numbers, specs, dimensions, order numbers. Slashed zero so 0 never reads as O. */
+@utility mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "zero", "tnum";
+  letter-spacing: 0;
+}
+
+/** Part / OE number: uppercase, tracked, mono. The brand's signature typography. */
+@utility part-no {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "zero", "tnum";
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/** Mono micro-label: § numbers, FIG. refs, spec strips, drawing metadata. */
+@utility tag-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/** Display type scale (Barlow Condensed). Max 6rem. */
+@utility display-1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: 0;
+  font-size: clamp(2.75rem, 1.6rem + 5.4vw, 5.5rem);
+}
+@utility display-2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.5rem);
+}
+@utility display-3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(1.5rem, 1.15rem + 1.4vw, 2.125rem);
+}
+@utility display-4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+}
+
+/** Part-number / label style: small caps look for SKUs, spec keys, table heads. */
+@utility label-caps {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+}
+
+/** Cut-corner (gasket tag) silhouette for primary calls to action and price tags. */
+@utility chamfer {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 0.6rem), calc(100% - 0.6rem) 100%, 0 100%);
+}
+@utility chamfer-sm {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 0.4rem), calc(100% - 0.4rem) 100%, 0 100%);
+}
+
+/** Measurement-scale hairline: ticks every 8px with a longer tick every 40px. */
+@utility ruler {
+  height: 10px;
+  background-image:
+    repeating-linear-gradient(to right, var(--border-strong) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(to right, var(--muted) 0 1px, transparent 1px 40px);
+  background-size: 100% 5px, 100% 10px;
+  background-position: 0 0, 0 0;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+}
+
+/**
+ * Drafting-sheet frame: 1px border plus registration crosshairs set into each corner.
+ * Put on a positioned element that has its own background; the marks sit on a pseudo-element above it.
+ */
+@utility reg-marks {
+  position: relative;
+  --reg-c: var(--border-strong);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-image:
+      linear-gradient(var(--reg-c), var(--reg-c)), linear-gradient(var(--reg-c), var(--reg-c)),
+      linear-gradient(var(--reg-c), var(--reg-c)), linear-gradient(var(--reg-c), var(--reg-c)),
+      linear-gradient(var(--reg-c), var(--reg-c)), linear-gradient(var(--reg-c), var(--reg-c)),
+      linear-gradient(var(--reg-c), var(--reg-c)), linear-gradient(var(--reg-c), var(--reg-c));
+    background-size: 11px 1px, 1px 11px, 11px 1px, 1px 11px, 11px 1px, 1px 11px, 11px 1px, 1px 11px;
+    background-position:
+      left 4px top 9px, left 9px top 4px,
+      right 4px top 9px, right 9px top 4px,
+      left 4px bottom 9px, left 9px bottom 4px,
+      right 4px bottom 9px, right 9px bottom 4px;
+  }
+}
+
+/** Faint millimetre paper: 8px minor, 40px major hairlines. */
+@utility grid-paper {
+  background-image:
+    linear-gradient(to right, light-dark(rgb(20 23 28 / 0.07), rgb(244 245 247 / 0.06)) 1px, transparent 1px),
+    linear-gradient(to bottom, light-dark(rgb(20 23 28 / 0.07), rgb(244 245 247 / 0.06)) 1px, transparent 1px),
+    linear-gradient(to right, light-dark(rgb(20 23 28 / 0.035), rgb(244 245 247 / 0.03)) 1px, transparent 1px),
+    linear-gradient(to bottom, light-dark(rgb(20 23 28 / 0.035), rgb(244 245 247 / 0.03)) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+}
+
+/** Millimetre paper for the fixed light drawing sheet. */
+@utility sheet-grid {
+  background-image:
+    linear-gradient(to right, rgb(20 23 28 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(20 23 28 / 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgb(20 23 28 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(20 23 28 / 0.035) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+}
+
+/** Hatched fill (section-view shading). */
+@utility hatch {
+  background-image: repeating-linear-gradient(135deg, var(--border-strong) 0 1px, transparent 1px 5px);
+}
+
+/** SVG stroke that draws itself: add to shapes carrying pathLength="1". */
+@utility draw-in {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: var(--animate-draw);
+}
+@utility tick-in {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: var(--animate-tick-in);
+}
+@utility stamp-in {
+  transform-origin: center;
+  animation: var(--animate-stamp);
+}
+
+/**
+ * Plotter reveal: the drawing is "plotted" left to right behind a scanning pen line. The one authored motion moment
+ * of the product page. Apply `plotter` to the art box and put a `plotter-pen` element inside it.
+ */
+@utility plotter {
+  animation: plotter-reveal 1.25s var(--ease-out-expo) both;
+}
+@utility plotter-pen {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 2px;
+  z-index: 3;
+  pointer-events: none;
+  background: var(--primary);
+  box-shadow: 0 0 0 1px light-dark(rgb(255 90 31 / 0.18), rgb(255 90 31 / 0.3));
+  animation: plotter-pen 1.25s var(--ease-out-expo) both;
+}
+@keyframes plotter-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes plotter-pen {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 2px);
+    opacity: 0;
+  }
+}
+
+/** Skeleton shimmer surface. */
+@utility skeleton {
+  background-color: var(--surface-sunken);
+  background-image: linear-gradient(100deg, transparent 20%, light-dark(rgb(255 255 255 / 0.7), rgb(255 255 255 / 0.07)) 50%, transparent 80%);
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+}
+
+/** Visually hidden but available to assistive tech. (Tailwind's `sr-only` also works.) */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 0.75rem;
+  z-index: 200;
+  transform: translateY(-200%);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: transform 160ms var(--ease-out-expo);
+}
+.skip-link:focus {
+  transform: none;
+}
+
+/* Print: invoices and order summaries */
+@media print {
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

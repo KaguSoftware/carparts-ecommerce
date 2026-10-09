@@ -1,0 +1,204 @@
+{
+  "admin": {
+    "common": {
+      "apply": "Apply",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "fixFields": "{count, plural, one {# field needs attention.} other {# fields need attention.}}",
+      "imageHint": "PNG, JPEG, WebP, AVIF or SVG, up to 5 MB.",
+      "missingTranslation": "Turkish is empty. The storefront will show the English text.",
+      "print": "Print",
+      "removeImage": "Remove",
+      "replaceImage": "Replace image",
+      "reset": "Reset",
+      "save": "Save",
+      "saveChanges": "Save changes",
+      "search": "Search",
+      "searchPlaceholder": "Type to search...",
+      "uploadImage": "Upload image",
+      "lang": {
+        "en": "English",
+        "tr": "Turkish"
+      }
+    },
+    "nav": {
+      "label": "Admin navigation",
+      "badge": "{count} waiting",
+      "groups": {
+        "overview": "Overview",
+        "sales": "Sales",
+        "catalog": "Catalog",
+        "content": "Content",
+        "system": "System"
+      },
+      "items": {
+        "dashboard": "Dashboard",
+        "orders": "Orders",
+        "customers": "Customers",
+        "reviews": "Reviews",
+        "coupons": "Coupons",
+        "products": "Products",
+        "categories": "Categories",
+        "brands": "Brands",
+        "vehicles": "Vehicles",
+        "inventory": "Inventory",
+        "banners": "Banners",
+        "pages": "Pages",
+        "messages": "Messages",
+        "newsletter": "Newsletter",
+        "settings": "Settings",
+        "shipping": "Shipping",
+        "tax": "Tax",
+        "staff": "Staff",
+        "audit": "Audit log",
+        "emails": "Email outbox"
+      }
+    },
+    "shell": {
+      "adminTag": "Admin",
+      "backToDashboard": "Back to dashboard",
+      "errorBody": "Something went wrong while loading this page. Try again, or go back to the dashboard.",
+      "errorTitle": "This page could not be loaded",
+      "footer": "Store management",
+      "home": "Admin home",
+      "menu": "Menu",
+      "noAccessBody": "Your account is not a staff account. Sign out and use an account with admin access.",
+      "noAccessTitle": "No access",
+      "notFoundBody": "The page you are looking for does not exist in the admin panel.",
+      "notFoundTitle": "Page not found",
+      "openMenu": "Open menu",
+      "reference": "Reference: {digest}",
+      "retry": "Try again",
+      "signOut": "Sign out",
+      "skipToContent": "Skip to content",
+      "viewStore": "View store",
+      "role": {
+        "staff": "Staff",
+        "admin": "Administrator"
+      }
+    },
+    "login": {
+      "customerSession": "You are signed in with a customer account. Sign in with a staff account to continue.",
+      "email": "Email",
+      "panelBody": "Orders, catalog, customers and settings in one place.",
+      "panelTitle": "Run the store",
+      "password": "Password",
+      "submit": "Sign in",
+      "subtitle": "Staff and administrators only.",
+      "title": "Admin sign in"
+    },
+    "status": {
+      "order": {
+        "pending_payment": "Awaiting payment",
+        "processing": "Processing",
+        "shipped": "Shipped",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled",
+        "refunded": "Refunded"
+      },
+      "payment": {
+        "unpaid": "Unpaid",
+        "paid": "Paid",
+        "failed": "Failed",
+        "partially_refunded": "Partly refunded",
+        "refunded": "Refunded"
+      },
+      "product": {
+        "draft": "Draft",
+        "active": "Active",
+        "archived": "Archived"
+      },
+      "review": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      },
+      "contact": {
+        "new": "New",
+        "read": "Read",
+        "replied": "Replied",
+        "archived": "Archived"
+      },
+      "coupon": {
+        "active": "Active",
+        "scheduled": "Scheduled",
+        "expired": "Expired",
+        "disabled": "Disabled"
+      },
+      "stock": {
+        "in_stock": "In stock",
+        "low_stock": "Low stock",
+        "out_of_stock": "Out of stock"
+      },
+      "role": {
+        "customer": "Customer",
+        "staff": "Staff",
+        "admin": "Admin"
+      },
+      "user": {
+        "active": "Active",
+        "disabled": "Disabled"
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Welcome back, {name}. Here is how the store is doing.",
+      "denied": "You do not have permission to open that page.",
+      "kpis": "Key figures",
+      "revenue": "Revenue",
+      "orders": "Orders",
+      "aov": "Average order value",
+      "customers": "Customers",
+      "vsPrevious": "vs previous period",
+      "newCustomers": "{count} new in this period",
+      "pendingReviews": "{count, plural, one {# review to moderate} other {# reviews to moderate}}",
+      "newMessages": "{count, plural, one {# new message} other {# new messages}}",
+      "recentOrders": "Recent orders",
+      "byStatus": "Orders by status",
+      "topProducts": "Top products",
+      "lowStock": "Low stock",
+      "viewAll": "View all",
+      "noOrders": "No orders in this period.",
+      "noSales": "No sales in this period.",
+      "noLowStock": "All stocked up. Nothing is running low.",
+      "availableOf": "{available} left (min {threshold})",
+      "range": {
+        "label": "Date range",
+        "d7": "7 days",
+        "d30": "30 days",
+        "d90": "90 days",
+        "d365": "1 year"
+      },
+      "charts": {
+        "revenue": "Revenue",
+        "orders": "Orders",
+        "aov": "Average order value",
+        "aov7": "7-day average order value",
+        "mean7": "7-day mean",
+        "periodMean": "Period mean"
+      },
+      "cols": {
+        "order": "Order",
+        "customer": "Customer",
+        "status": "Status",
+        "total": "Total",
+        "date": "Date",
+        "product": "Product",
+        "sku": "SKU",
+        "units": "Units",
+        "revenue": "Revenue"
+      },
+      "queue": {
+        "label": "Work queue",
+        "awaitingPayment": "Awaiting payment",
+        "reviews": "Reviews to moderate",
+        "lowStock": "Low stock variants",
+        "messages": "New messages",
+        "open": "Open",
+        "moderate": "Moderate",
+        "restock": "Restock",
+        "reply": "Reply"
+      }
+    }
+  }
+}

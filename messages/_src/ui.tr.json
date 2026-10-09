@@ -1,0 +1,65 @@
+{
+  "ui": {
+    "field": {
+      "optional": "isteğe bağlı"
+    },
+    "modal": {
+      "close": "Pencereyi kapat"
+    },
+    "toast": {
+      "region": "Bildirimler",
+      "dismiss": "Bildirimi kapat"
+    },
+    "pagination": {
+      "label": "Sayfalama",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "page": "Sayfa {page}"
+    },
+    "breadcrumbs": {
+      "label": "Sayfa yolu"
+    },
+    "spinner": {
+      "loading": "Yükleniyor"
+    },
+    "theme": {
+      "toggle": "Tema: {current}. Temayı değiştir",
+      "toggleShort": "Temayı değiştir",
+      "system": "Sistem",
+      "light": "Açık",
+      "dark": "Koyu"
+    },
+    "plate": {
+      "label": "Parça kimliği",
+      "partNo": "Parça no.",
+      "oe": "OE ref.",
+      "sku": "SKU",
+      "copy": "{value} değerini kopyala",
+      "copied": "{value} kopyalandı",
+      "copyFailed": "Kopyalanamadı. Numarayı seçip elle kopyalayın.",
+      "brand": "Marka"
+    },
+    "preferences": {
+      "label": "Dil ve tema",
+      "language": "Dil",
+      "theme": "Tema"
+    }
+  },
+  "pages": {
+    "notFound": {
+      "title": "Sayfa bulunamadı",
+      "description": "Aradığınız sayfa taşınmış, kaldırılmış veya hiç var olmamış olabilir.",
+      "home": "Ana sayfaya dön",
+      "search": "Parça ara",
+      "status": "Bulunamadı",
+      "drawing": "Kesikli çizgilerle çizilmiş eksik bir parça"
+    },
+    "error": {
+      "title": "Bizim tarafımızda bir sorun oluştu",
+      "description": "Beklenmeyen bir hata aldık. Tekrar deneyin veya ana sayfaya dönün.",
+      "reference": "Referans: {digest}",
+      "retry": "Tekrar dene",
+      "home": "Ana sayfaya dön"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "store": {
+    "header": {
+      "skipToContent": "Ana içeriğe geç",
+      "home": "APEXLINE Auto Parts, ana sayfa",
+      "wishlist": "Favoriler",
+      "account": "Hesabım",
+      "signIn": "Giriş yap",
+      "savedShort": "Kayıtlı",
+      "accountShort": "Hesap",
+      "signInShort": "Giriş"
+    },
+    "nav": {
+      "categories": "Kategoriye göre alışveriş",
+      "shopAll": "Tüm {name} ürünleri",
+      "deals": "Fırsatlar",
+      "brands": "Markalar",
+      "openMenu": "Menüyü aç",
+      "menu": "Menü",
+      "mobile": "Ana gezinme",
+      "garage": "Garajım",
+      "account": "Hesabım",
+      "signIn": "Giriş yap veya hesap oluştur",
+      "trackOrder": "Sipariş takibi"
+    },
+    "search": {
+      "label": "Parça ara",
+      "placeholder": "Parça, marka veya parça numarası ara",
+      "clear": "Aramayı temizle",
+      "submit": "Ara",
+      "suggestions": "Arama önerileri",
+      "searching": "Aranıyor...",
+      "typeMore": "Eşleşen parçaları görmek için yazmaya devam edin.",
+      "noResults": "\"{query}\" için eşleşme yok",
+      "noResultsHint": "Yazımı kontrol edin veya bir parça numarası, marka ya da kategori deneyin.",
+      "partMatch": "Parça numarası eşleşmesi",
+      "products": "Parçalar",
+      "categories": "Kategoriler",
+      "brands": "Markalar",
+      "goToPart": "{code} parçasına git",
+      "seeAll": "\"{query}\" için tüm sonuçları gör",
+      "resultsAnnounce": "{count, plural, one {# öneri var} other {# öneri var}}"
+    },
+    "newsletter": {
+      "emailLabel": "E-posta adresi",
+      "placeholder": "ornek@eposta.com",
+      "submit": "Abone ol",
+      "privacy": "Ayda bir e-posta. Dilediğiniz zaman aboneliği bırakabilirsiniz.",
+      "success": "Listeye eklendiniz. Gelen kutunuzda bir karşılama notu var.",
+      "alreadySubscribed": "Zaten abonesiniz. Bizimle kaldığınız için teşekkürler."
+    },
+    "footer": {
+      "newsletterTitle": "Atölyeden notlar, ayda bir",
+      "newsletterBody": "Uyumluluk ipuçları, bakım aralıkları ve en iyi fırsatlar. Gereksiz laf yok.",
+      "home": "APEXLINE Auto Parts, ana sayfa",
+      "shop": "Alışveriş",
+      "brands": "Tüm markalar",
+      "deals": "Fırsatlar",
+      "help": "Yardım",
+      "trackOrder": "Sipariş takibi",
+      "contact": "Bize ulaşın",
+      "garage": "Garajım",
+      "account": "Hesabım",
+      "company": "Kurumsal",
+      "follow": "Bizi takip edin",
+      "social": {
+        "instagram": "Instagram",
+        "youtube": "YouTube",
+        "x": "X",
+        "facebook": "Facebook"
+      },
+      "opensInNewTab": "(yeni sekmede açılır)",
+      "copyright": "© {year} {name}. Tüm hakları saklıdır.",
+      "securePayments": "Güvenli ödeme. Kart bilgileri saklanmaz.",
+      "titleBlock": {
+        "label": "Çizim künyesi",
+        "dwg": "Resim",
+        "sheet": "Sayfa",
+        "rev": "Rev"
+      }
+    },
+    "vehicle": {
+      "make": "Marka",
+      "model": "Model",
+      "year": "Yıl",
+      "engine": "Motor",
+      "selectMake": "Marka seçin",
+      "selectModel": "Model seçin",
+      "anyYear": "Tüm yıllar",
+      "anyEngine": "Tüm motorlar",
+      "save": "Uyan parçaları bul",
+      "saved": "Garajınıza kaydedildi: {label}",
+      "loadError": "Araç listesi yüklenemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+      "cleared": "Araç garajınızdan kaldırıldı.",
+      "garage": "Garajım",
+      "selectVehicle": "Aracınızı seçin",
+      "garageWithVehicle": "Garajım: {label}. Aracı değiştir",
+      "openSelector": "Garajım: aracınızı seçin",
+      "dialogTitle": "Garajım",
+      "dialogCurrent": "{label} aracınıza uyan parçalar gösteriliyor.",
+      "dialogDescription": "Aracınızı bir kez seçin, her sayfada yalnızca uyan parçaları görün.",
+      "manageGarage": "Garajı aç",
+      "remove": "Aracı kaldır",
+      "partsFit": "{count} parça uyuyor"
+    }
+  }
+}

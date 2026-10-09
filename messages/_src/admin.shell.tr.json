@@ -1,0 +1,204 @@
+{
+  "admin": {
+    "common": {
+      "apply": "Uygula",
+      "cancel": "Vazgeç",
+      "confirm": "Onayla",
+      "fixFields": "{count, plural, one {# alan düzeltilmeli.} other {# alan düzeltilmeli.}}",
+      "imageHint": "PNG, JPEG, WebP, AVIF veya SVG, en fazla 5 MB.",
+      "missingTranslation": "Türkçe alan boş. Mağaza İngilizce metni gösterecek.",
+      "print": "Yazdır",
+      "removeImage": "Kaldır",
+      "replaceImage": "Görseli değiştir",
+      "reset": "Sıfırla",
+      "save": "Kaydet",
+      "saveChanges": "Değişiklikleri kaydet",
+      "search": "Ara",
+      "searchPlaceholder": "Aramak için yazın...",
+      "uploadImage": "Görsel yükle",
+      "lang": {
+        "en": "İngilizce",
+        "tr": "Türkçe"
+      }
+    },
+    "nav": {
+      "label": "Yönetim menüsü",
+      "badge": "{count} bekliyor",
+      "groups": {
+        "overview": "Genel bakış",
+        "sales": "Satış",
+        "catalog": "Katalog",
+        "content": "İçerik",
+        "system": "Sistem"
+      },
+      "items": {
+        "dashboard": "Gösterge paneli",
+        "orders": "Siparişler",
+        "customers": "Müşteriler",
+        "reviews": "Yorumlar",
+        "coupons": "Kuponlar",
+        "products": "Ürünler",
+        "categories": "Kategoriler",
+        "brands": "Markalar",
+        "vehicles": "Araçlar",
+        "inventory": "Stok",
+        "banners": "Bannerlar",
+        "pages": "Sayfalar",
+        "messages": "Mesajlar",
+        "newsletter": "Bülten",
+        "settings": "Ayarlar",
+        "shipping": "Kargo",
+        "tax": "Vergi",
+        "staff": "Ekip",
+        "audit": "Denetim kaydı",
+        "emails": "E-posta kutusu"
+      }
+    },
+    "shell": {
+      "adminTag": "Yönetim",
+      "backToDashboard": "Gösterge paneline dön",
+      "errorBody": "Bu sayfa yüklenirken bir sorun oluştu. Tekrar deneyin ya da gösterge paneline dönün.",
+      "errorTitle": "Bu sayfa yüklenemedi",
+      "footer": "Mağaza yönetimi",
+      "home": "Yönetim ana sayfası",
+      "menu": "Menü",
+      "noAccessBody": "Hesabınız bir ekip hesabı değil. Çıkış yapıp yönetici erişimi olan bir hesapla giriş yapın.",
+      "noAccessTitle": "Erişim yok",
+      "notFoundBody": "Aradığınız sayfa yönetim panelinde bulunmuyor.",
+      "notFoundTitle": "Sayfa bulunamadı",
+      "openMenu": "Menüyü aç",
+      "reference": "Referans: {digest}",
+      "retry": "Tekrar dene",
+      "signOut": "Çıkış yap",
+      "skipToContent": "İçeriğe geç",
+      "viewStore": "Mağazayı görüntüle",
+      "role": {
+        "staff": "Ekip üyesi",
+        "admin": "Yönetici"
+      }
+    },
+    "login": {
+      "customerSession": "Bir müşteri hesabıyla giriş yaptınız. Devam etmek için ekip hesabıyla giriş yapın.",
+      "email": "E-posta",
+      "panelBody": "Siparişler, katalog, müşteriler ve ayarlar tek yerde.",
+      "panelTitle": "Mağazayı yönetin",
+      "password": "Parola",
+      "submit": "Giriş yap",
+      "subtitle": "Yalnızca ekip üyeleri ve yöneticiler içindir.",
+      "title": "Yönetim girişi"
+    },
+    "status": {
+      "order": {
+        "pending_payment": "Ödeme bekleniyor",
+        "processing": "Hazırlanıyor",
+        "shipped": "Kargoda",
+        "delivered": "Teslim edildi",
+        "cancelled": "İptal edildi",
+        "refunded": "İade edildi"
+      },
+      "payment": {
+        "unpaid": "Ödenmedi",
+        "paid": "Ödendi",
+        "failed": "Başarısız",
+        "partially_refunded": "Kısmen iade",
+        "refunded": "İade edildi"
+      },
+      "product": {
+        "draft": "Taslak",
+        "active": "Aktif",
+        "archived": "Arşivlendi"
+      },
+      "review": {
+        "pending": "Beklemede",
+        "approved": "Onaylandı",
+        "rejected": "Reddedildi"
+      },
+      "contact": {
+        "new": "Yeni",
+        "read": "Okundu",
+        "replied": "Yanıtlandı",
+        "archived": "Arşivlendi"
+      },
+      "coupon": {
+        "active": "Aktif",
+        "scheduled": "Planlandı",
+        "expired": "Süresi doldu",
+        "disabled": "Devre dışı"
+      },
+      "stock": {
+        "in_stock": "Stokta",
+        "low_stock": "Az stok",
+        "out_of_stock": "Tükendi"
+      },
+      "role": {
+        "customer": "Müşteri",
+        "staff": "Ekip üyesi",
+        "admin": "Yönetici"
+      },
+      "user": {
+        "active": "Aktif",
+        "disabled": "Devre dışı"
+      }
+    },
+    "dashboard": {
+      "title": "Gösterge paneli",
+      "subtitle": "Tekrar hoş geldiniz, {name}. Mağazanın durumu şöyle.",
+      "denied": "Bu sayfayı açmak için yetkiniz yok.",
+      "kpis": "Temel göstergeler",
+      "revenue": "Gelir",
+      "orders": "Siparişler",
+      "aov": "Ortalama sipariş tutarı",
+      "customers": "Müşteriler",
+      "vsPrevious": "önceki döneme göre",
+      "newCustomers": "Bu dönemde {count} yeni",
+      "pendingReviews": "{count, plural, one {Onay bekleyen # yorum} other {Onay bekleyen # yorum}}",
+      "newMessages": "{count, plural, one {# yeni mesaj} other {# yeni mesaj}}",
+      "recentOrders": "Son siparişler",
+      "byStatus": "Duruma göre siparişler",
+      "topProducts": "En çok satan ürünler",
+      "lowStock": "Azalan stok",
+      "viewAll": "Tümünü gör",
+      "noOrders": "Bu dönemde sipariş yok.",
+      "noSales": "Bu dönemde satış yok.",
+      "noLowStock": "Stoklar yeterli. Azalan ürün yok.",
+      "availableOf": "{available} kaldı (en az {threshold})",
+      "range": {
+        "label": "Tarih aralığı",
+        "d7": "7 gün",
+        "d30": "30 gün",
+        "d90": "90 gün",
+        "d365": "1 yıl"
+      },
+      "charts": {
+        "revenue": "Gelir",
+        "orders": "Siparişler",
+        "aov": "Ortalama sipariş tutarı",
+        "aov7": "7 günlük ortalama sipariş tutarı",
+        "mean7": "7 günlük ortalama",
+        "periodMean": "Dönem ortalaması"
+      },
+      "cols": {
+        "order": "Sipariş",
+        "customer": "Müşteri",
+        "status": "Durum",
+        "total": "Toplam",
+        "date": "Tarih",
+        "product": "Ürün",
+        "sku": "Stok kodu",
+        "units": "Adet",
+        "revenue": "Gelir"
+      },
+      "queue": {
+        "label": "İş kuyruğu",
+        "awaitingPayment": "Ödeme bekleyen",
+        "reviews": "Onay bekleyen yorum",
+        "lowStock": "Azalan stok kalemi",
+        "messages": "Yeni mesaj",
+        "open": "Aç",
+        "moderate": "İncele",
+        "restock": "Stok ekle",
+        "reply": "Yanıtla"
+      }
+    }
+  }
+}

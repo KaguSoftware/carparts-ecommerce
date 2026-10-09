@@ -1,0 +1,107 @@
+{
+  "engine3d": {
+    "title": "Motor sökümü",
+    "subtitle": "Honda K24 i-VTEC, parça parça",
+    "body": "2,4 litrelik DOHC dört silindirli motoru kaydırarak parçalarına ayırın. Mağazadaki ilgili parçaları bulmak için bir parçanın üzerine gelin.",
+    "bodyTouch": "2,4 litrelik DOHC dört silindirli motoru kaydırarak parçalarına ayırın. Mağazadaki ilgili parçaları bulmak için bir parçaya dokunun.",
+    "bodyManual": "2,4 litrelik DOHC dört silindirli motoru parçalarına ayırmak için kaydırıcıyı sürükleyin. Mağazadaki ilgili parçaları bulmak için bir parçanın üzerine gelin.",
+    "bodyManualTouch": "2,4 litrelik DOHC dört silindirli motoru parçalarına ayırmak için kaydırıcıyı sürükleyin. Mağazadaki ilgili parçaları bulmak için bir parçaya dokunun.",
+    "bodyStatic": "2,4 litrelik DOHC dört silindirli motor, parça parça serilmiş. Mağazadaki ilgili parçaları bulmak için bir parçanın üzerine gelin.",
+    "bodyStaticTouch": "2,4 litrelik DOHC dört silindirli motor, parça parça serilmiş. Mağazadaki ilgili parçaları bulmak için bir parçaya dokunun.",
+    "shopEngine": "Motor parçalarına göz atın",
+    "regionLabel": "Etkileşimli motor sökümü",
+    "canvasLabel": "Dört silindirli bir motorun etkileşimli patlatılmış görünümü. Döndürmek için sürükleyin. Parça listesinde her bileşen için bir bağlantı var.",
+    "blueprintLabel": "Dört silindirli bir motorun patlatılmış teknik çizimi: üstte külbütör kapağı, altta yağ karteri.",
+    "partsList": "Motor parçaları",
+    "partsListMobile": "Parça listesi ({count})",
+    "hintScroll": "Ayırmak için kaydırın",
+    "hintDrag": "Döndürmek için sürükleyin",
+    "assembled": "Birleşik",
+    "exploded": "Ayrık",
+    "explode": "Ayır",
+    "loading": "3B model yükleniyor",
+    "failed": "3B görünüm bu cihazda başlatılamadı. Teknik çizim aynı parçaları gösterir.",
+    "optIn": "3B olarak keşfedin",
+    "optInReduced": "Bu cihazda hareket azaltılmış, bu yüzden 3B görünüm siz isteyene kadar kapalı kalır.",
+    "optInSaver": "Veri tasarrufu veya düşük güçlü bir cihaz algılandı, bu yüzden 3B görünüm siz isteyene kadar kapalı kalır.",
+    "noWebgl": "Bu tarayıcı 3B grafik çizemiyor. Teknik çizim aynı parçaları gösterir.",
+    "disclaimer": "2,4 litrelik DOHC dört silindirli motorun açıklayıcı, kodla üretilmiş modeli; üretici CAD verisi değildir. Honda ve i-VTEC sahiplerinin ticari markalarıdır; APEXLINE ile bağlantıları yoktur.",
+    "parts": {
+      "valveCover": {
+        "name": "Külbütör kapağı",
+        "note": "Üst bölümü kapatır ve yağı olması gereken yerde tutar.",
+        "shop": "Conta ve keçelere göz atın"
+      },
+      "camshafts": {
+        "name": "Eksantrik milleri",
+        "note": "İki mil supapları açar. Emme tarafındaki yüksek orta lob VTEC yüksek kamıdır.",
+        "shop": "Eksantrik millerine göz atın"
+      },
+      "camGears": {
+        "name": "Eksantrik dişlileri",
+        "note": "Her eksantrik milini krank miline göre fazlar. Emme dişlisi değişken zamanlama aktüatörünü taşır.",
+        "shop": "Kayış ve triger ürünlerine göz atın"
+      },
+      "rockerArms": {
+        "name": "VTEC külbütörleri",
+        "note": "Yüksek devirde bir kilit pimi üç emme külbütörünü birleştirir.",
+        "shop": "Külbütörlere göz atın"
+      },
+      "cylinderHead": {
+        "name": "Silindir kapağı",
+        "note": "Yanma odaları, kanallar ve supap yuvaları tek dökümde.",
+        "shop": "Silindir kapaklarına göz atın"
+      },
+      "valves": {
+        "name": "Supaplar ve yaylar",
+        "note": "Silindir başına dört supap: iki emme, iki egzoz.",
+        "shop": "Supap ve yaylara göz atın"
+      },
+      "headGasket": {
+        "name": "Silindir kapak contası",
+        "note": "Blok ile kapak arasındaki çok katmanlı çelik conta.",
+        "shop": "Conta ve keçelere göz atın"
+      },
+      "block": {
+        "name": "Motor bloğu",
+        "note": "87 mm silindir çaplı ve beş ana yataklı döküm silindir bloğu.",
+        "shop": "Motor bloklarına göz atın"
+      },
+      "pistons": {
+        "name": "Piston ve segmanlar",
+        "note": "Üç segmanlı alüminyum pistonlar yanmayı sızdırmaz tutar.",
+        "shop": "Piston ve segmanlara göz atın"
+      },
+      "conrods": {
+        "name": "Biyeller",
+        "note": "Dövme I kesitli biyeller her pistonu krank miline bağlar.",
+        "shop": "Biyellere göz atın"
+      },
+      "crankshaft": {
+        "name": "Krank mili",
+        "note": "Karşı ağırlıklar kolları dengeler, piston itkisini torka çevirir.",
+        "shop": "Krank millerine göz atın"
+      },
+      "oilPan": {
+        "name": "Yağ karteri",
+        "note": "Motor yağını tutan karter.",
+        "shop": "Motor yağlarına göz atın"
+      },
+      "intakeManifold": {
+        "name": "Emme manifoldu",
+        "note": "Gaz kelebeği gövdesinden gelen havayı dört kanala böler.",
+        "shop": "Hava filtrelerine göz atın"
+      },
+      "exhaustManifold": {
+        "name": "Egzoz manifoldu",
+        "note": "Dört porttan çıkan yanmış gazı tek çıkışta toplar.",
+        "shop": "Egzoz ürünlerine göz atın"
+      },
+      "timingChain": {
+        "name": "Triger zinciri",
+        "note": "Makaralı zincir iki eksantrik milini krank milinden tahrik eder.",
+        "shop": "Kayış ve triger ürünlerine göz atın"
+      }
+    }
+  }
+}

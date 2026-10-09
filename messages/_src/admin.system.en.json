@@ -1,0 +1,261 @@
+{
+  "admin": {
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Store details, currency, checkout rules and notifications.",
+      "saved": "Settings saved.",
+      "countryHint": "Two-letter country code, for example US.",
+      "store": {
+        "title": "Store",
+        "description": "Shown on invoices, emails and the storefront footer.",
+        "name": "Store name",
+        "legalEntity": "Legal entity",
+        "email": "Support email",
+        "phone": "Phone",
+        "taxId": "Tax ID",
+        "taxIdHint": "Printed on invoices when set.",
+        "line1": "Address",
+        "city": "City",
+        "region": "State / region",
+        "postalCode": "Postal code",
+        "country": "Country"
+      },
+      "currency": {
+        "title": "Currency",
+        "description": "Prices are stored in US dollars. Turkish storefront visitors see Turkish lira converted at this rate.",
+        "rate": "Turkish lira per 1 USD",
+        "rateHint": "Orders freeze the rate at checkout, so changing it never alters past orders."
+      },
+      "inventory": {
+        "title": "Inventory",
+        "threshold": "Default low stock threshold",
+        "thresholdHint": "Used for new variants.",
+        "backorders": "Allow backorders",
+        "backordersHint": "Stored for later. Overselling is not supported by the current stock model."
+      },
+      "checkout": {
+        "title": "Checkout",
+        "description": "Rules applied when customers place orders.",
+        "guest": "Guest checkout",
+        "guestHint": "Let customers order without creating an account.",
+        "prefix": "Order number prefix",
+        "prefixHint": "Up to 8 letters, numbers or dashes.",
+        "maxQty": "Maximum quantity per line",
+        "freeShipping": "Free shipping threshold",
+        "freeShippingHint": "USD subtotal that unlocks free shipping. 0 turns it off.",
+        "reservation": "Payment window (minutes)",
+        "reservationHint": "How long stock is held for an unpaid order.",
+        "defaultCountry": "Default country",
+        "shippable": "Countries we ship to",
+        "shippableHint": "Two-letter codes separated by commas."
+      },
+      "seo": {
+        "title": "Search engines",
+        "description": "Fallback title and description for pages without their own.",
+        "defaultTitle": "Default title",
+        "defaultDescription": "Default description"
+      },
+      "social": {
+        "title": "Social links"
+      },
+      "emails": {
+        "title": "Email notifications",
+        "description": "Emails are written to the outbox until a mail provider is connected.",
+        "orderConfirmation": "Send order confirmations",
+        "shippingUpdate": "Send shipping updates",
+        "adminNewOrder": "Notify staff about new orders",
+        "adminAddress": "Staff notification address",
+        "adminAddressHint": "Where new order alerts are sent."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "label": "Maintenance mode",
+        "hint": "Shows a maintenance message to customers. Staff keep access to the admin panel."
+      }
+    },
+    "shipping": {
+      "title": "Shipping",
+      "subtitle": "Methods, rates and the countries each one serves.",
+      "new": "New method",
+      "newTitle": "New shipping method",
+      "editTitle": "Edit {name}",
+      "empty": "No shipping methods yet. Customers cannot check out without one.",
+      "everywhere": "Anywhere",
+      "perKg": "+ {amount} per kg over 1 kg",
+      "days": "{min}-{max} days",
+      "active": "Active",
+      "inactive": "Inactive",
+      "edit": "Edit {name}",
+      "delete": "Delete {name}",
+      "deleteTitle": "Delete {name}?",
+      "deleteBody": "Past orders keep the method they used.",
+      "deleteConfirm": "Delete method",
+      "deleted": "Shipping method deleted.",
+      "cols": {
+        "method": "Method",
+        "countries": "Countries",
+        "rate": "Rate",
+        "freeOver": "Free over",
+        "delivery": "Delivery",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "code": "Code",
+        "codeHint": "Short identifier such as standard, express or pickup.",
+        "sortOrder": "Sort order",
+        "name": "Name",
+        "description": "Description",
+        "countries": "Countries served",
+        "countriesHint": "Two-letter codes separated by commas, or * for everywhere.",
+        "price": "Base rate",
+        "usd": "USD",
+        "perKgPrice": "Extra per kg",
+        "perKgHint": "USD per full kilogram above the first.",
+        "freeOver": "Free over",
+        "freeOverHint": "USD subtotal that makes this method free. Leave empty for never.",
+        "daysMin": "Delivery days (min)",
+        "daysMax": "Delivery days (max)",
+        "active": "Active",
+        "activeHint": "Inactive methods are not offered at checkout.",
+        "saved": "Shipping method saved."
+      }
+    },
+    "tax": {
+      "title": "Tax",
+      "subtitle": "Sales tax rates by country and region.",
+      "note": "Tax is added on top of prices. When several rates match, the most specific one wins: a region rate beats a country rate.",
+      "new": "New tax rate",
+      "newTitle": "New tax rate",
+      "editTitle": "Edit {name}",
+      "empty": "No tax rates yet. Orders are charged without tax.",
+      "wholeCountry": "Whole country",
+      "taxed": "Taxed",
+      "notTaxed": "Not taxed",
+      "active": "Active",
+      "inactive": "Inactive",
+      "edit": "Edit {name}",
+      "delete": "Delete {name}",
+      "deleteTitle": "Delete {name}?",
+      "deleteBody": "Past orders keep the tax they were charged.",
+      "deleteConfirm": "Delete rate",
+      "deleted": "Tax rate deleted.",
+      "cols": {
+        "name": "Name",
+        "country": "Country",
+        "region": "Region",
+        "rate": "Rate",
+        "shipping": "Shipping",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Name",
+        "country": "Country",
+        "countryHint": "Two-letter code.",
+        "region": "Region",
+        "regionHint": "State or province. Leave empty for the whole country.",
+        "rate": "Rate",
+        "rateHint": "For example 8.25 for 8.25%.",
+        "appliesToShipping": "Also tax shipping",
+        "appliesToShippingHint": "Adds the rate to the shipping charge as well.",
+        "active": "Active",
+        "saved": "Tax rate saved."
+      }
+    },
+    "staff": {
+      "title": "Staff",
+      "subtitle": "People who can sign in to the admin panel.",
+      "permissionsNote": "Staff can manage the catalog, inventory, orders, reviews, coupons, banners and pages. Administrators can also refund orders, change settings, manage staff and read the audit log.",
+      "invite": "Invite staff",
+      "inviteTitle": "Invite a team member",
+      "inviteBody": "They receive an email with a link to set their password.",
+      "empty": "No staff accounts.",
+      "you": "You",
+      "never": "Never",
+      "roleFor": "Role of {name}",
+      "roleChanged": "Role updated.",
+      "roles": {
+        "staff": "Staff",
+        "admin": "Administrator",
+        "customer": "Customer (remove access)"
+      },
+      "reset": "Send password reset to {name}",
+      "resetTitle": "Send a password reset to {name}?",
+      "resetBody": "They receive an email with a link to choose a new password.",
+      "resetConfirm": "Send reset email",
+      "resetSent": "Password reset email sent.",
+      "enable": "Enable {name}",
+      "enableTitle": "Enable {name}?",
+      "enableBody": "They will be able to sign in again.",
+      "enableConfirm": "Enable",
+      "enabled": "Account enabled.",
+      "disable": "Disable {name}",
+      "disableTitle": "Disable {name}?",
+      "disableBody": "They are signed out everywhere and cannot sign in until you enable the account again.",
+      "disableConfirm": "Disable",
+      "disabled": "Account disabled.",
+      "delete": "Delete {name}",
+      "deleteTitle": "Delete {name}?",
+      "deleteBody": "The account is removed. Their past actions stay in the audit log.",
+      "deleteConfirm": "Delete account",
+      "deleted": "Account deleted.",
+      "cols": {
+        "user": "Person",
+        "role": "Role",
+        "status": "Status",
+        "lastLogin": "Last sign-in",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "role": "Role",
+        "roleHint": "Administrators have full access. Staff cannot refund, change settings or manage people.",
+        "staff": "Staff",
+        "admin": "Administrator",
+        "send": "Send invite",
+        "created": "Invite sent."
+      }
+    },
+    "audit": {
+      "title": "Audit log",
+      "subtitle": "{count, plural, one {# entry} other {# entries}}. Every admin change is recorded here.",
+      "searchPlaceholder": "Search summaries and ids...",
+      "empty": "No entries match.",
+      "system": "System",
+      "changes": "{count, plural, one {# change} other {# changes}}",
+      "cols": {
+        "when": "When",
+        "actor": "Who",
+        "action": "Action",
+        "entity": "Record",
+        "summary": "What happened"
+      },
+      "filters": {
+        "action": "Action",
+        "entity": "Record type",
+        "from": "From",
+        "to": "To"
+      }
+    },
+    "emails": {
+      "title": "Email outbox",
+      "subtitle": "Every email the store has sent.",
+      "note": "No mail provider is connected, so emails are saved here instead of being delivered. Password and invite links in these emails give access, so this page is for administrators only.",
+      "empty": "No emails yet.",
+      "plainText": "Plain text version",
+      "cols": {
+        "when": "Sent",
+        "to": "To",
+        "subject": "Subject",
+        "template": "Template",
+        "language": "Language"
+      },
+      "filters": {
+        "to": "Recipient",
+        "toPlaceholder": "name@example.com"
+      }
+    }
+  }
+}

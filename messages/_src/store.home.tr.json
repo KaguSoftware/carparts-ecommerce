@@ -1,0 +1,76 @@
+{
+  "store": {
+    "home": {
+      "hero": {
+        "headlineFallback": "Tam oturur.",
+        "subhead": "Her parça, sepete girmeden önce aracınızın markası, modeli, yılı ve motoruyla karşılaştırılır. Aracınızı seçin; katalog uymayan parçaları göstermeyi bıraksın.",
+        "cta": "Fren disklerine bak",
+        "browse": "Tüm parçalara göz at",
+        "dimDiameter": "Ø {value} mm",
+        "dimThickness": "{value} mm kalınlık",
+        "dimBolts": "{count} bijon deliği",
+        "tbDrawing": "RESİM",
+        "tbRev": "REV",
+        "tbScale": "ÖLÇEK",
+        "tbFits": "UYAR",
+        "fitsVehicles": "{count} araç",
+        "headlineSpec": "{a} × {b} × {c}.",
+        "headlineTail": "Ölçü tutmuyorsa yola çıkmaz."
+      },
+      "finder": {
+        "title": "Aracınıza uyan parçaları bulun",
+        "hint": "Marka / model / yıl / motor. Aracınızı bir kez seçin, yalnızca uyanları gösterelim.",
+        "submit": "Parçaları bul",
+        "yourGarage": "Garajınız",
+        "garageHint": "Artık her sayfada bu araç için uyumluluk rozetleri görünüyor.",
+        "shopFitting": "Uyan parçalara göz at",
+        "changeVehicle": "Aracı değiştir"
+      },
+      "categoriesTitle": "Gruba göre alışveriş",
+      "allParts": "Tüm parçalar",
+      "partCount": "{count, plural, one {# parça} other {# parça}}",
+      "dealsTitle": "Haftanın fırsatları",
+      "dealsBody": "Stok bitene kadar indirimde. Aynı parça numarası, daha düşük fiyat.",
+      "allDeals": "Tüm fırsatlar",
+      "bestTitle": "Çok satanlar",
+      "newTitle": "Yeni gelenler",
+      "brandsTitle": "Marka dizini",
+      "allBrands": "Tüm markalar",
+      "promosLabel": "Kampanyalar",
+      "partsSr": "parça",
+      "colPartNo": "Parça no.",
+      "colPart": "Parça",
+      "colSpec": "Özellik",
+      "colFit": "Uyum",
+      "colPrice": "Fiyat",
+      "colStock": "Stok",
+      "colAdd": "Sepete ekle",
+      "view": "İncele",
+      "brandParts": "{count} parça",
+      "bulletin": "Duyuru {n}",
+      "service": {
+        "label": "Hizmet şartnamesi",
+        "fitment": {
+          "key": "Uyumluluk",
+          "value": "Garantili",
+          "note": "Her parça aracınızla eşleştirilir, uymazsa geri alırız."
+        },
+        "dispatch": {
+          "key": "Sevkiyat",
+          "value": "15:00 kesim",
+          "note": "Saat 15.00'ten önce verilen sipariş aynı gün depodan çıkar."
+        },
+        "returns": {
+          "key": "İade",
+          "value": "30 gün",
+          "note": "Kullanılmamış parçalar, nedenini sormadan iade alınır."
+        },
+        "support": {
+          "key": "Teknik hat",
+          "value": "Pzt-Cmt",
+          "note": "Bizzat anahtar çevirmiş insanlarla konuşun. Pzt-Cum 08-18, Cmt 09-14."
+        }
+      }
+    }
+  }
+}

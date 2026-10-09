@@ -1,0 +1,35 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# build / test output
+/build
+/coverage
+/playwright-report
+/test-results
+*.tsbuildinfo
+
+# runtime data (copies of seed, mutated by the running app)
+/data/runtime/
+/data/runtime-e2e/
+/data/outbox/
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+Thumbs.db
+npm-debug.log*
+.vercel

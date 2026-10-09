@@ -1,0 +1,97 @@
+{
+  "store": {
+    "shop": {
+      "metaTitle": "Shop all auto parts",
+      "metaDescription": "Browse brakes, engine, suspension, filters, lighting and more. Filter by your exact vehicle and shop genuine-fit parts.",
+      "home": "Home",
+      "title": "All parts",
+      "description": "Every part in stock, matched to the car in your garage. Filter by brand, price and availability."
+    },
+    "listing": {
+      "categories": "Categories",
+      "brands": "Brands",
+      "showAllBrands": "Show all {count} brands",
+      "showFewerBrands": "Show fewer brands",
+      "price": "Price",
+      "priceMin": "Min",
+      "priceMax": "Max",
+      "applyPrice": "Apply price",
+      "availability": "Availability",
+      "inStock": "In stock",
+      "onSale": "On sale",
+      "rating": "Customer rating",
+      "ratingAndUp": "{rating} & up",
+      "filters": "Filters",
+      "showResults": "Show results",
+      "sortBy": "Sort by",
+      "sort": {
+        "relevance": "Best match",
+        "featured": "Recommended",
+        "bestselling": "Best selling",
+        "newest": "Newest",
+        "price_asc": "Price: low to high",
+        "price_desc": "Price: high to low",
+        "rating": "Top rated",
+        "name_asc": "Name: A to Z"
+      },
+      "chipPriceRange": "{min} to {max}",
+      "chipPriceFrom": "From {amount}",
+      "chipPriceTo": "Up to {amount}",
+      "garageFiltered": "Showing parts that fit your {label}",
+      "garageFilteredHint": "Parts that do not fit are hidden.",
+      "showAllParts": "Show all parts",
+      "garageAll": "Showing all parts. Your garage: {label}",
+      "garageAllHint": "Fit badges show which parts match your vehicle.",
+      "onlyFitting": "Only parts that fit",
+      "resultsHeading": "Results",
+      "noParts": "No parts found",
+      "showing": "Showing {from}-{to} of {total, plural, one {# part} other {# parts}}",
+      "activeFilters": "Active filters",
+      "removeFilter": "Remove filter",
+      "clearFilters": "Clear all filters",
+      "didYouMean": "Did you mean",
+      "emptyTitle": "No parts match",
+      "emptyFiltered": "Try removing a filter or searching for something broader.",
+      "emptyBody": "There are no parts here yet. Check back soon.",
+      "headerMeta": "{parts, plural, one {# part} other {# parts}} / {subs, plural, one {# sub-assembly} other {# sub-assemblies}}"
+    },
+    "category": {
+      "home": "Home",
+      "shop": "Shop",
+      "subcategories": "Subcategories"
+    },
+    "brand": {
+      "metaTitle": "{name} parts",
+      "home": "Home",
+      "brands": "Brands",
+      "logoAlt": "{name} logo",
+      "origin": "Country of origin"
+    },
+    "brands": {
+      "metaTitle": "All brands",
+      "metaDescription": "Shop auto parts by brand: from our own APEXLINE Select range to trusted names in brakes, filters, lighting and more.",
+      "home": "Home",
+      "title": "Brands",
+      "description": "Every manufacturer we stock, all fitment-checked against the vehicles in our catalogue.",
+      "featured": "Featured brands",
+      "all": "More brands",
+      "parts": "{count, plural, one {# part} other {# parts}}"
+    },
+    "deals": {
+      "metaTitle": "Deals and discounted parts",
+      "metaDescription": "Discounted brakes, filters, lighting and more while stock lasts. Updated weekly.",
+      "home": "Home",
+      "title": "Deals",
+      "description": "Marked-down parts from stock. Prices drop only while the stock lasts."
+    },
+    "search": {
+      "pageTitle": "Search",
+      "pageTitleQuery": "Search results for \"{query}\"",
+      "home": "Home",
+      "emptyIntro": "Search by part name, brand, SKU, part number or OEM number.",
+      "popular": "Popular searches",
+      "browse": "Or browse by category",
+      "heading": "Results for \"{query}\""
+    }
+  }
+}

@@ -1,0 +1,575 @@
+// APEXLINE Auto Parts - Prisma schema DRAFT mirroring src/lib/db/collections.ts + src/lib/types/domain.ts.
+// Not wired into the app (the app runs on the JSON-file repositories). Use it as the starting point when
+// implementing Database/Repository (src/lib/db/contracts.ts) on a real database.
+//
+// Conventions
+//  - One model per collection; @@map keeps the collection key as the table name.
+//  - Ids are opaque strings (prefixed nanoids such as "prd_..."), so String @id with no default.
+//  - Money is integer USD cents (Int). Order/payment charged amounts are minor units of the order currency.
+//  - ISO date strings in domain.ts become DateTime.
+//  - LocalizedString ({ en, tr }) and other nested/array structures are Json columns.
+//  - Enums are String columns validated by zod in services (swap to native enums if desired).
+//  - Foreign keys are plain indexed columns; add @relation blocks as needed. History-style rows
+//    (orders, payments, inventoryMovements, auditLog) intentionally have no cascading FKs.
+//  - Better Auth: prefer the official Prisma adapter; the auth* models mirror the tables used today.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/* ------------------------------------------------------------------ users & auth */
+
+model User {
+  id             String    @id
+  email          String    @unique
+  emailVerified  Boolean   @default(false)
+  name           String
+  image          String?
+  role           String    @default("customer") // customer | staff | admin
+  phone          String?
+  locale         String    @default("en") // en | tr
+  disabled       Boolean   @default(false)
+  marketingOptIn Boolean   @default(false)
+  lastLoginAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model Address {
+  id                String  @id
+  userId            String
+  label             String?
+  firstName         String
+  lastName          String
+  company           String?
+  line1             String
+  line2             String?
+  city              String
+  region            String
+  postalCode        String
+  country           String // ISO 3166-1 alpha-2
+  phone             String
+  isDefaultShipping Boolean @default(false)
+  isDefaultBilling  Boolean @default(false)
+
+  @@index([userId])
+  @@map("addresses")
+}
+
+model AuthAccount {
+  id         String   @id
+  userId     String
+  providerId String
+  accountId  String
+  password   String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([providerId, accountId])
+  @@index([userId])
+  @@map("authAccounts")
+}
+
+model AuthSession {
+  id        String   @id
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("authSessions")
+}
+
+model AuthVerification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("authVerifications")
+}
+
+model LoginAttempt {
+  id          String    @id
+  key         String    @unique
+  failures    Int       @default(0)
+  lockedUntil DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  @@map("loginAttempts")
+}
+
+/* ------------------------------------------------------------------ catalog */
+
+model Category {
+  id             String   @id
+  slug           String   @unique
+  parentId       String?
+  name           Json // LocalizedString
+  description    Json // LocalizedString
+  image          String?
+  icon           String?
+  sortOrder      Int      @default(0)
+  isActive       Boolean  @default(true)
+  seoTitle       Json? // LocalizedString
+  seoDescription Json? // LocalizedString
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([parentId])
+  @@map("categories")
+}
+
+model Brand {
+  id          String   @id
+  slug        String   @unique
+  name        String
+  description Json // LocalizedString
+  logo        String?
+  country     String?
+  website     String?
+  isActive    Boolean  @default(true)
+  isFeatured  Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("brands")
+}
+
+model Product {
+  id             String   @id
+  slug           String   @unique
+  name           Json // LocalizedString
+  summary        Json // LocalizedString
+  description    Json // LocalizedString (markdown)
+  brandId        String
+  categoryId     String // primary category
+  categoryIds    String[] // all categories incl. primary (use a join table if relational filtering is needed)
+  images         Json // ProductImage[] { id, url, alt: LocalizedString, sortOrder }
+  specs          Json // ProductSpec[] { key: LocalizedString, value: LocalizedString }
+  tags           String[]
+  status         String   @default("draft") // draft | active | archived
+  isFeatured     Boolean  @default(false)
+  partNumber     String
+  oemNumbers     String[]
+  warrantyMonths Int      @default(0)
+  fitment        String   @default("universal") // universal | specific
+  ratingAverage  Float    @default(0)
+  ratingCount    Int      @default(0)
+  soldCount      Int      @default(0)
+  seoTitle       Json? // LocalizedString
+  seoDescription Json? // LocalizedString
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([brandId])
+  @@index([categoryId])
+  @@index([status, isFeatured])
+  @@index([partNumber])
+  @@map("products")
+}
+
+model ProductVariant {
+  id                String   @id
+  productId         String
+  sku               String   @unique
+  name              Json // LocalizedString
+  options           Json // VariantOption[] { name: LocalizedString, value: LocalizedString }
+  price             Int // cents
+  compareAtPrice    Int?
+  cost              Int?
+  stockOnHand       Int      @default(0)
+  stockReserved     Int      @default(0)
+  lowStockThreshold Int      @default(5)
+  weightGrams       Int      @default(0)
+  barcode           String?
+  imageId           String?
+  isActive          Boolean  @default(true)
+  isDefault         Boolean  @default(false)
+  sortOrder         Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([productId])
+  @@map("variants")
+}
+
+/* ------------------------------------------------------------------ vehicles & fitment */
+
+model VehicleMake {
+  id   String @id
+  slug String @unique
+  name String
+
+  @@map("vehicleMakes")
+}
+
+model VehicleModel {
+  id     String @id
+  makeId String
+  slug   String
+  name   String
+
+  @@unique([makeId, slug])
+  @@map("vehicleModels")
+}
+
+model Vehicle {
+  id       String  @id
+  makeId   String
+  modelId  String
+  year     Int
+  engine   String
+  fuel     String // petrol | diesel | hybrid | electric | lpg
+  bodyType String?
+
+  @@index([makeId, modelId, year])
+  @@map("vehicles")
+}
+
+model Fitment {
+  id        String @id
+  productId String
+  vehicleId String
+  note      Json? // LocalizedString
+
+  @@unique([productId, vehicleId])
+  @@index([vehicleId])
+  @@map("fitment")
+}
+
+/* ------------------------------------------------------------------ inventory */
+
+model InventoryMovement {
+  id            String   @id
+  variantId     String
+  productId     String
+  delta         Int
+  reservedDelta Int
+  reason        String // initial | purchase | sale | adjustment | return | reservation | release | damage | correction
+  reference     String?
+  note          String?
+  actor         Json // Actor { id, email?, role, ip? }
+  onHandAfter   Int
+  reservedAfter Int
+  createdAt     DateTime @default(now())
+
+  @@index([variantId, createdAt])
+  @@index([productId])
+  @@map("inventoryMovements")
+}
+
+/* ------------------------------------------------------------------ reviews */
+
+model Review {
+  id               String   @id
+  productId        String
+  userId           String?
+  authorName       String
+  rating           Int // 1-5
+  title            String
+  body             String
+  locale           String   @default("en")
+  status           String   @default("pending") // pending | approved | rejected
+  verifiedPurchase Boolean  @default(false)
+  helpfulCount     Int      @default(0)
+  adminReply       Json? // { body, at, by }
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([productId, status])
+  @@index([userId])
+  @@map("reviews")
+}
+
+model ReviewVote {
+  id       String   @id
+  reviewId String
+  voterKey String
+  at       DateTime @default(now())
+
+  @@unique([reviewId, voterKey])
+  @@map("reviewVotes")
+}
+
+/* ------------------------------------------------------------------ cart, orders, payments */
+
+model Cart {
+  id         String   @id
+  userId     String?
+  items      Json // CartItem[] { variantId, quantity, addedAt, priceAtAdd }
+  couponCode String?
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("carts")
+}
+
+model Order {
+  id              String    @id
+  number          String    @unique
+  userId          String?
+  email           String
+  status          String // pending_payment | processing | shipped | delivered | cancelled | refunded
+  paymentStatus   String // unpaid | paid | failed | partially_refunded | refunded
+  items           Json // OrderItem[]
+  shippingAddress Json // AddressInput
+  billingAddress  Json // AddressInput
+  shippingMethod  Json // { id, code, name: LocalizedString, price, estimatedDaysMin, estimatedDaysMax }
+  couponCode      String?
+  subtotal        Int
+  discount        Int
+  shipping        Int
+  tax             Int
+  total           Int // USD cents
+  currency        String // USD | TRY
+  fxRate          Float
+  chargedTotal    Int // minor units of `currency`
+  refundedTotal   Int       @default(0)
+  locale          String    @default("en")
+  customerNote    String?
+  trackingNumber  String?
+  carrier         String?
+  shippedAt       DateTime?
+  deliveredAt     DateTime?
+  accessToken     String    @unique
+  idempotencyKey  String    @unique
+  events          Json // OrderEvent[]
+  internalNotes   Json // { id, at, by, body }[]
+  paymentId       String?
+  cartId          String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([userId, createdAt])
+  @@index([email])
+  @@index([status, createdAt])
+  @@map("orders")
+}
+
+model Payment {
+  id          String   @id
+  orderId     String
+  provider    String // mock | stripe
+  providerRef String
+  amount      Int // minor units of `currency`
+  currency    String
+  status      String // requires_payment_method | requires_action | succeeded | failed | cancelled
+  method      Json? // { brand, last4, expMonth, expYear }
+  failureCode String?
+  refunds     Json // Refund[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([orderId])
+  @@index([providerRef])
+  @@map("payments")
+}
+
+/* ------------------------------------------------------------------ coupons / shipping / tax */
+
+model Coupon {
+  id           String    @id
+  code         String    @unique // stored UPPERCASE
+  description  Json // LocalizedString
+  type         String // percent | fixed | free_shipping
+  value        Int
+  minSubtotal  Int?
+  maxDiscount  Int?
+  startsAt     DateTime?
+  endsAt       DateTime?
+  usageLimit   Int?
+  perUserLimit Int?
+  usedCount    Int       @default(0)
+  appliesTo    Json? // { categoryIds?, brandIds?, productIds? }
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@map("coupons")
+}
+
+model CouponRedemption {
+  id       String   @id
+  couponId String
+  orderId  String
+  userId   String?
+  email    String
+  at       DateTime @default(now())
+
+  @@index([couponId, userId])
+  @@index([couponId, email])
+  @@map("couponRedemptions")
+}
+
+model ShippingMethod {
+  id               String   @id
+  code             String   @unique
+  name             Json // LocalizedString
+  description      Json // LocalizedString
+  countries        String[] // ["*"] = anywhere
+  price            Int
+  perKgPrice       Int      @default(0)
+  freeOverSubtotal Int?
+  estimatedDaysMin Int
+  estimatedDaysMax Int
+  isActive         Boolean  @default(true)
+  sortOrder        Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("shippingMethods")
+}
+
+model TaxRate {
+  id                String   @id
+  name              Json // LocalizedString
+  country           String
+  region            String   @default("")
+  rateBps           Int // 825 = 8.25%
+  appliesToShipping Boolean  @default(false)
+  isActive          Boolean  @default(true)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([country, region])
+  @@map("taxRates")
+}
+
+/* ------------------------------------------------------------------ marketing & content */
+
+model Wishlist {
+  id         String   @id
+  userId     String   @unique
+  productIds String[]
+  updatedAt  DateTime @updatedAt
+
+  @@map("wishlists")
+}
+
+model Page {
+  id             String   @id
+  slug           String   @unique
+  title          Json // LocalizedString
+  body           Json // LocalizedString (markdown subset)
+  isPublished    Boolean  @default(false)
+  showInFooter   Boolean  @default(false)
+  sortOrder      Int      @default(0)
+  seoDescription Json? // LocalizedString
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("pages")
+}
+
+model Banner {
+  id        String    @id
+  placement String // home_hero | home_promo | announcement | category_top
+  title     Json // LocalizedString
+  subtitle  Json // LocalizedString
+  ctaLabel  Json // LocalizedString
+  ctaHref   String
+  image     String?
+  tone      String // dark | orange | light
+  startsAt  DateTime?
+  endsAt    DateTime?
+  isActive  Boolean   @default(true)
+  sortOrder Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([placement, isActive])
+  @@map("banners")
+}
+
+model NewsletterSubscriber {
+  id             String    @id
+  email          String    @unique
+  locale         String    @default("en")
+  source         String
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+
+  @@map("newsletter")
+}
+
+model ContactMessage {
+  id          String   @id
+  name        String
+  email       String
+  phone       String?
+  subject     String
+  message     String
+  orderNumber String?
+  locale      String   @default("en")
+  status      String   @default("new") // new | read | replied | archived
+  adminNotes  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([status, createdAt])
+  @@map("contactMessages")
+}
+
+/* ------------------------------------------------------------------ settings, audit, analytics */
+
+/// Singleton row, id = "settings". Nested groups stay Json (store, currency, checkout, inventory, seo, social, emails).
+model Settings {
+  id              String   @id @default("settings")
+  store           Json
+  currency        Json
+  checkout        Json
+  inventory       Json
+  seo             Json
+  social          Json
+  maintenanceMode Boolean  @default(false)
+  emails          Json
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("settings")
+}
+
+model AuditEntry {
+  id         String   @id
+  at         DateTime @default(now())
+  actor      Json // Actor
+  action     String // dot.case verb
+  entityType String
+  entityId   String
+  summary    String
+  changes    Json? // Record<string, { from, to }>
+
+  @@index([entityType, entityId])
+  @@index([at])
+  @@map("auditLog")
+}
+
+model SearchLog {
+  id          String   @id
+  q           String
+  resultCount Int
+  at          DateTime @default(now())
+
+  @@index([q])
+  @@index([at])
+  @@map("searchLog")
+}

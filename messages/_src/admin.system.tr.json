@@ -1,0 +1,261 @@
+{
+  "admin": {
+    "settings": {
+      "title": "Ayarlar",
+      "subtitle": "Mağaza bilgileri, para birimi, ödeme kuralları ve bildirimler.",
+      "saved": "Ayarlar kaydedildi.",
+      "countryHint": "İki harfli ülke kodu, örneğin US.",
+      "store": {
+        "title": "Mağaza",
+        "description": "Faturalarda, e-postalarda ve mağazanın alt bilgisinde gösterilir.",
+        "name": "Mağaza adı",
+        "legalEntity": "Ticari unvan",
+        "email": "Destek e-postası",
+        "phone": "Telefon",
+        "taxId": "Vergi numarası",
+        "taxIdHint": "Girilirse faturalara yazdırılır.",
+        "line1": "Adres",
+        "city": "Şehir",
+        "region": "Eyalet / bölge",
+        "postalCode": "Posta kodu",
+        "country": "Ülke"
+      },
+      "currency": {
+        "title": "Para birimi",
+        "description": "Fiyatlar ABD doları olarak saklanır. Türkçe mağazayı gezen ziyaretçiler fiyatları bu kurla çevrilmiş Türk lirası olarak görür.",
+        "rate": "1 USD karşılığı Türk lirası",
+        "rateHint": "Siparişler kuru ödeme anında sabitler; bu yüzden kuru değiştirmek geçmiş siparişleri etkilemez."
+      },
+      "inventory": {
+        "title": "Stok",
+        "threshold": "Varsayılan az stok eşiği",
+        "thresholdHint": "Yeni varyantlar için kullanılır.",
+        "backorders": "Ön siparişe izin ver",
+        "backordersHint": "İleride kullanılmak üzere saklanır. Mevcut stok modeli stoktan fazla satışı desteklemez."
+      },
+      "checkout": {
+        "title": "Ödeme",
+        "description": "Müşteriler sipariş verirken uygulanan kurallar.",
+        "guest": "Üyeliksiz alışveriş",
+        "guestHint": "Müşterilerin hesap oluşturmadan sipariş vermesine izin verir.",
+        "prefix": "Sipariş numarası öneki",
+        "prefixHint": "En fazla 8 harf, rakam veya tire.",
+        "maxQty": "Satır başına en fazla adet",
+        "freeShipping": "Ücretsiz kargo sınırı",
+        "freeShippingHint": "Ücretsiz kargoyu açan USD ara toplamı. 0 girerseniz kapalı olur.",
+        "reservation": "Ödeme süresi (dakika)",
+        "reservationHint": "Ödenmemiş bir sipariş için stoğun ne kadar süre ayrılacağı.",
+        "defaultCountry": "Varsayılan ülke",
+        "shippable": "Gönderim yapılan ülkeler",
+        "shippableHint": "İki harfli kodlar, virgülle ayrılmış."
+      },
+      "seo": {
+        "title": "Arama motorları",
+        "description": "Kendi başlığı ve açıklaması olmayan sayfalar için yedek başlık ve açıklama.",
+        "defaultTitle": "Varsayılan başlık",
+        "defaultDescription": "Varsayılan açıklama"
+      },
+      "social": {
+        "title": "Sosyal medya bağlantıları"
+      },
+      "emails": {
+        "title": "E-posta bildirimleri",
+        "description": "Bir e-posta sağlayıcısı bağlanana kadar e-postalar gönderim kutusuna yazılır.",
+        "orderConfirmation": "Sipariş onayı gönder",
+        "shippingUpdate": "Kargo bildirimi gönder",
+        "adminNewOrder": "Yeni siparişleri ekibe bildir",
+        "adminAddress": "Ekip bildirim adresi",
+        "adminAddressHint": "Yeni sipariş uyarılarının gönderileceği adres."
+      },
+      "maintenance": {
+        "title": "Bakım",
+        "label": "Bakım modu",
+        "hint": "Müşterilere bakım mesajı gösterir. Ekip yönetim paneline erişmeye devam eder."
+      }
+    },
+    "shipping": {
+      "title": "Kargo",
+      "subtitle": "Yöntemler, ücretler ve her birinin hizmet verdiği ülkeler.",
+      "new": "Yeni yöntem",
+      "newTitle": "Yeni kargo yöntemi",
+      "editTitle": "{name} düzenle",
+      "empty": "Henüz kargo yöntemi yok. Yöntem olmadan müşteriler ödeme yapamaz.",
+      "everywhere": "Her yer",
+      "perKg": "+ 1 kg üzeri her kg için {amount}",
+      "days": "{min}-{max} gün",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "edit": "{name} düzenle",
+      "delete": "{name} sil",
+      "deleteTitle": "{name} silinsin mi?",
+      "deleteBody": "Geçmiş siparişler kullandıkları yöntemi korur.",
+      "deleteConfirm": "Yöntemi sil",
+      "deleted": "Kargo yöntemi silindi.",
+      "cols": {
+        "method": "Yöntem",
+        "countries": "Ülkeler",
+        "rate": "Ücret",
+        "freeOver": "Ücretsiz sınırı",
+        "delivery": "Teslimat",
+        "status": "Durum",
+        "actions": "İşlemler"
+      },
+      "form": {
+        "code": "Kod",
+        "codeHint": "standard, express veya pickup gibi kısa bir tanımlayıcı.",
+        "sortOrder": "Sıralama",
+        "name": "Ad",
+        "description": "Açıklama",
+        "countries": "Hizmet verilen ülkeler",
+        "countriesHint": "İki harfli kodlar virgülle ayrılır; her yer için * yazın.",
+        "price": "Temel ücret",
+        "usd": "USD",
+        "perKgPrice": "Ek kg ücreti",
+        "perKgHint": "İlk kilogramın üzerindeki her tam kilogram için USD.",
+        "freeOver": "Ücretsiz sınırı",
+        "freeOverHint": "Bu yöntemi ücretsiz yapan USD ara toplamı. Hiç ücretsiz olmasın istiyorsanız boş bırakın.",
+        "daysMin": "Teslimat süresi (en az gün)",
+        "daysMax": "Teslimat süresi (en çok gün)",
+        "active": "Aktif",
+        "activeHint": "Pasif yöntemler ödeme sırasında sunulmaz.",
+        "saved": "Kargo yöntemi kaydedildi."
+      }
+    },
+    "tax": {
+      "title": "Vergi",
+      "subtitle": "Ülke ve bölgeye göre satış vergisi oranları.",
+      "note": "Vergi fiyatların üzerine eklenir. Birden çok oran eşleşirse en özel olan geçerli olur: bölge oranı ülke oranından önce gelir.",
+      "new": "Yeni vergi oranı",
+      "newTitle": "Yeni vergi oranı",
+      "editTitle": "{name} düzenle",
+      "empty": "Henüz vergi oranı yok. Siparişler vergisiz tahsil edilir.",
+      "wholeCountry": "Tüm ülke",
+      "taxed": "Vergilendirilir",
+      "notTaxed": "Vergilendirilmez",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "edit": "{name} düzenle",
+      "delete": "{name} sil",
+      "deleteTitle": "{name} silinsin mi?",
+      "deleteBody": "Geçmiş siparişler tahsil edildikleri vergiyi korur.",
+      "deleteConfirm": "Oranı sil",
+      "deleted": "Vergi oranı silindi.",
+      "cols": {
+        "name": "Ad",
+        "country": "Ülke",
+        "region": "Bölge",
+        "rate": "Oran",
+        "shipping": "Kargo",
+        "status": "Durum",
+        "actions": "İşlemler"
+      },
+      "form": {
+        "name": "Ad",
+        "country": "Ülke",
+        "countryHint": "İki harfli kod.",
+        "region": "Bölge",
+        "regionHint": "Eyalet veya il. Tüm ülke için boş bırakın.",
+        "rate": "Oran",
+        "rateHint": "Örneğin %8,25 için 8.25 yazın.",
+        "appliesToShipping": "Kargoyu da vergilendir",
+        "appliesToShippingHint": "Oranı kargo ücretine de ekler.",
+        "active": "Aktif",
+        "saved": "Vergi oranı kaydedildi."
+      }
+    },
+    "staff": {
+      "title": "Ekip",
+      "subtitle": "Yönetim paneline giriş yapabilen kişiler.",
+      "permissionsNote": "Ekip üyeleri kataloğu, stoğu, siparişleri, yorumları, kuponları, bannerları ve sayfaları yönetebilir. Yöneticiler ayrıca iade yapabilir, ayarları değiştirebilir, ekibi yönetebilir ve denetim kaydını okuyabilir.",
+      "invite": "Ekip üyesi davet et",
+      "inviteTitle": "Ekibe yeni biri davet edin",
+      "inviteBody": "Parolasını belirlemesi için bir bağlantı içeren e-posta alır.",
+      "empty": "Ekip hesabı yok.",
+      "you": "Siz",
+      "never": "Hiç",
+      "roleFor": "{name} rolü",
+      "roleChanged": "Rol güncellendi.",
+      "roles": {
+        "staff": "Ekip üyesi",
+        "admin": "Yönetici",
+        "customer": "Müşteri (erişimi kaldır)"
+      },
+      "reset": "{name} için parola sıfırlama gönder",
+      "resetTitle": "{name} kişisine parola sıfırlama gönderilsin mi?",
+      "resetBody": "Yeni parola belirlemesi için bir bağlantı içeren e-posta alır.",
+      "resetConfirm": "Sıfırlama e-postası gönder",
+      "resetSent": "Parola sıfırlama e-postası gönderildi.",
+      "enable": "{name} etkinleştir",
+      "enableTitle": "{name} etkinleştirilsin mi?",
+      "enableBody": "Yeniden giriş yapabilir.",
+      "enableConfirm": "Etkinleştir",
+      "enabled": "Hesap etkinleştirildi.",
+      "disable": "{name} devre dışı bırak",
+      "disableTitle": "{name} devre dışı bırakılsın mı?",
+      "disableBody": "Her yerden çıkış yaptırılır ve hesabı yeniden etkinleştirene kadar giriş yapamaz.",
+      "disableConfirm": "Devre dışı bırak",
+      "disabled": "Hesap devre dışı bırakıldı.",
+      "delete": "{name} sil",
+      "deleteTitle": "{name} silinsin mi?",
+      "deleteBody": "Hesap kaldırılır. Geçmiş işlemleri denetim kaydında kalır.",
+      "deleteConfirm": "Hesabı sil",
+      "deleted": "Hesap silindi.",
+      "cols": {
+        "user": "Kişi",
+        "role": "Rol",
+        "status": "Durum",
+        "lastLogin": "Son giriş",
+        "actions": "İşlemler"
+      },
+      "form": {
+        "name": "Ad soyad",
+        "email": "E-posta",
+        "role": "Rol",
+        "roleHint": "Yöneticilerin tam erişimi vardır. Ekip üyeleri iade yapamaz, ayarları değiştiremez ve kişileri yönetemez.",
+        "staff": "Ekip üyesi",
+        "admin": "Yönetici",
+        "send": "Daveti gönder",
+        "created": "Davet gönderildi."
+      }
+    },
+    "audit": {
+      "title": "Denetim kaydı",
+      "subtitle": "{count} kayıt. Yönetimdeki her değişiklik burada tutulur.",
+      "searchPlaceholder": "Özetlerde ve kimliklerde ara...",
+      "empty": "Eşleşen kayıt yok.",
+      "system": "Sistem",
+      "changes": "{count, plural, one {# değişiklik} other {# değişiklik}}",
+      "cols": {
+        "when": "Zaman",
+        "actor": "Kim",
+        "action": "İşlem",
+        "entity": "Kayıt",
+        "summary": "Ne oldu"
+      },
+      "filters": {
+        "action": "İşlem",
+        "entity": "Kayıt türü",
+        "from": "Başlangıç",
+        "to": "Bitiş"
+      }
+    },
+    "emails": {
+      "title": "E-posta kutusu",
+      "subtitle": "Mağazanın gönderdiği tüm e-postalar.",
+      "note": "Bir e-posta sağlayıcısı bağlı olmadığından e-postalar gönderilmek yerine burada saklanır. Bu e-postalardaki parola ve davet bağlantıları erişim sağladığı için bu sayfa yalnızca yöneticilere açıktır.",
+      "empty": "Henüz e-posta yok.",
+      "plainText": "Düz metin sürümü",
+      "cols": {
+        "when": "Gönderim",
+        "to": "Alıcı",
+        "subject": "Konu",
+        "template": "Şablon",
+        "language": "Dil"
+      },
+      "filters": {
+        "to": "Alıcı",
+        "toPlaceholder": "ad@ornek.com"
+      }
+    }
+  }
+}

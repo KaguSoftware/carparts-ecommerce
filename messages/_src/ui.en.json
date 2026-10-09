@@ -1,0 +1,65 @@
+{
+  "ui": {
+    "field": {
+      "optional": "optional"
+    },
+    "modal": {
+      "close": "Close dialog"
+    },
+    "toast": {
+      "region": "Notifications",
+      "dismiss": "Dismiss notification"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page}"
+    },
+    "breadcrumbs": {
+      "label": "Breadcrumb"
+    },
+    "spinner": {
+      "loading": "Loading"
+    },
+    "theme": {
+      "toggle": "Theme: {current}. Switch theme",
+      "toggleShort": "Switch theme",
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "plate": {
+      "label": "Part identification",
+      "partNo": "Part no.",
+      "oe": "OE ref.",
+      "sku": "SKU",
+      "copy": "Copy {value}",
+      "copied": "Copied {value}",
+      "copyFailed": "Could not copy. Select the number and copy it manually.",
+      "brand": "Brand"
+    },
+    "preferences": {
+      "label": "Language and theme",
+      "language": "Language",
+      "theme": "Theme"
+    }
+  },
+  "pages": {
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for has moved, been retired, or never existed.",
+      "home": "Back to home",
+      "search": "Search parts",
+      "status": "Not found",
+      "drawing": "Drawing of a missing part, drawn in dashed lines"
+    },
+    "error": {
+      "title": "Something broke on our side",
+      "description": "We hit an unexpected error. Try again, or head back to the homepage.",
+      "reference": "Reference: {digest}",
+      "retry": "Try again",
+      "home": "Back to home"
+    }
+  }
+}
