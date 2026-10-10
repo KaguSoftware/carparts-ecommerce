@@ -10,6 +10,9 @@ can replace them later without touching business logic or UI.
 - **Admin** (`/admin`): dashboard, products + variants, categories, brands, fitment, inventory with history,
   orders (ship / deliver / cancel / refund), customers, reviews moderation, coupons, shipping and tax, banners and
   CMS pages, store settings, staff and roles, audit log, email outbox, CSV import / export.
+- **Signature**: a scroll-driven 3D exploded view of a Honda K24 style engine on the home page (see
+  [Engine teardown](#engine-teardown-3d)) and a drafting / workshop-manual visual identity (hairline grids,
+  numbered balloons, part-number typography, generated line-drawing product art).
 - **Backend**: zod-validated Server Actions and route handlers, Better Auth (email + password, sessions, password
   reset, roles), idempotent checkout with stock reservation inside a write transaction, server-side pricing,
   rate limiting and login lockout, security headers / CSP, env validation, structured logging, `/api/health`.
@@ -262,7 +265,7 @@ reconciled (audited and auto-refunded).
 ## Testing
 
 ```bash
-npm test                 # Vitest: 300+ unit and API tests
+npm test                 # Vitest: 310+ unit and API tests (312 at the last full run)
 npx playwright install chromium
 npm run test:e2e         # builds the app, starts it on port 3100 with a throw-away data directory
 ```
@@ -337,3 +340,10 @@ read); point load balancers at it.
 - JSON persistence, in-memory rate limiting and per-order refund locks are single-process; see the Prisma steps.
 - Payments are mocked and emails go to a file outbox until a real provider and mailer are wired in.
 - The Turkish storefront shows TRY using a fixed rate, not live exchange rates.
+- The Stripe adapter is a documented slot and has not been exercised against Stripe.
+- `docs/prisma-draft.prisma` is a draft and has not been checked with `prisma validate`.
+- The Docker image has not been built in CI; the standalone server (`node .next/standalone/server.js`) was
+  smoke-tested. `next start` prints a harmless warning about `output: standalone`.
+- A signed-in customer who opens an `/admin` URL sees a "No access" page rather than being redirected.
+- The 3D engine is procedural and stylised, not manufacturer CAD (see the `.glb` guide above).
+- Visual QA was done by automated screenshots and agent review; have a human review the design before launch.
